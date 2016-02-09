@@ -1,11 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
-.responsive {
-	color : blue;
+#navBar {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 50px;
 }
+
+#navBar img{
+	width: 120px;
+}
+
+#menu{
+	text-align: center;
+	border-top: 1px solid white;
+}
+
+#menu ul li {
+	height: 30px;
+}
+
+#menu ul li a{
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	color: grey;
+}
+
+
 
 /* == RESPONSIVE TABLETTE == */
 
