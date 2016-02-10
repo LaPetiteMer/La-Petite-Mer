@@ -2,8 +2,9 @@ window.addEventListener("load", function(e){
 
 	var burgerMenu = document.getElementById("burger_menu");
 	var menu = document.getElementById("menu");
+	
+// SLIDEMENU 
 	var open = false;
-
 	var openMenu = function(){
 		menu.classList.remove('closeMenu');
 		menu.classList.add('openMenu');
@@ -27,6 +28,12 @@ window.addEventListener("load", function(e){
 	burgerMenu.addEventListener("click", function(){
 		playMenu();
 	});
+
+// END SLIDEMENU 
+
+
+// ANIMATION BURGERMENU
+
 
 
 }, false);

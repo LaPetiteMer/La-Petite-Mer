@@ -19,7 +19,6 @@
 
 
 #menu {
-    text-align: center;
     border-top: 1px solid white;
     position: relative;
     right: 0;
@@ -29,6 +28,7 @@
             li {
                 height: 40px;
                 a{
+                    padding-left: 20px;
                     height: 40px;
                     line-height: 40px;
                     text-decoration: none;
@@ -62,22 +62,39 @@
 	right: 0;
 	width: 36px;
 	height: 30px;
-	padding: 6px;
 	border: 1px solid black;
 	border-color: rgba(0, 0, 0, 0.3);
 	border-radius: 2px;
 	margin-top: 10px;
 	margin-right: 15px;
     cursor: pointer;
-            .top, .middle, .bottom {
-                height: 2px;
-                background-color: black;
-                margin: auto;
-            }
-            
-            .middle, .bottom {
-                margin-top: 5px;
-            }
-            
+        div {
+            position: relative;
+            height: 100%;
+                .top, .middle, .bottom {
+                    position: absolute;
+                    height: 2px;
+                    background-color: black;
+                    margin: auto;
+                }
+                
+                .top {
+                    top: 6px;
+                    width: 28px;
+                    margin-left: 3px;
+                }
+
+                .middle {
+                    top: 13px;
+                    width: 28px;
+                    margin-left: 3px;
+                }
+
+                .bottom {
+                    bottom: 6px;
+                    width: 28px;
+                    margin-left: 3px;
+                }
+        }             
 }
 

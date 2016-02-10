@@ -12,7 +12,6 @@
     background-color: white; }
 
 #menu {
-  text-align: center;
   border-top: 1px solid white;
   position: relative;
   right: 0;
@@ -22,6 +21,7 @@
     #menu ul li {
       height: 40px; }
       #menu ul li a {
+        padding-left: 20px;
         height: 40px;
         line-height: 40px;
         text-decoration: none;
@@ -46,19 +46,32 @@
   right: 0;
   width: 36px;
   height: 30px;
-  padding: 6px;
   border: 1px solid black;
   border-color: rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   margin-top: 10px;
   margin-right: 15px;
   cursor: pointer; }
-  #burger_menu .top, #burger_menu .middle, #burger_menu .bottom {
-    height: 2px;
-    background-color: black;
-    margin: auto; }
-  #burger_menu .middle, #burger_menu .bottom {
-    margin-top: 5px; }
+  #burger_menu div {
+    position: relative;
+    height: 100%; }
+    #burger_menu div .top, #burger_menu div .middle, #burger_menu div .bottom {
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      margin: auto; }
+    #burger_menu div .top {
+      top: 6px;
+      width: 28px;
+      margin-left: 3px; }
+    #burger_menu div .middle {
+      top: 13px;
+      width: 28px;
+      margin-left: 3px; }
+    #burger_menu div .bottom {
+      bottom: 6px;
+      width: 28px;
+      margin-left: 3px; }
 
 * {
   margin: 0;
