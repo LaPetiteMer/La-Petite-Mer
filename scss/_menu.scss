@@ -1,3 +1,43 @@
+@-webkit-keyframes slideDown{
+  from {top: 6px;}
+  to {top: 13px;}
+}
+
+@-webkit-keyframes slideDownInverse{
+  from {top: 13px;}
+  to {top: 6px;}
+}
+
+@-webkit-keyframes rotateRight{
+  0%{ -webkit-transform: rotate(0deg);}
+  100%{-webkit-transform: rotate(45deg);}
+}
+
+@-webkit-keyframes rotateRightInverse{
+  0%{ -webkit-transform: rotate(45deg);}
+  100%{-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes slideUp{
+  from {bottom: 6px;}
+  to {bottom: 13px;}
+}
+
+@-webkit-keyframes slideUpInverse{
+  from {bottom: 13px;}
+  to {bottom: 6px;}
+}
+
+@-webkit-keyframes rotateLeft{
+  0%{ -webkit-transform: rotate(0deg);}
+  100%{-webkit-transform: rotate(-45deg);}
+}
+
+@-webkit-keyframes rotateLeftInverse{
+  0%{ -webkit-transform: rotate(-45deg);}
+  100%{-webkit-transform: rotate(0deg);}
+}
+
 #navBar {
     position: relative;
     z-index: 10;
@@ -71,26 +111,26 @@
         div {
             position: relative;
             height: 100%;
-                .top, .middle, .bottom {
+                #top, #middle, #bottom {
                     position: absolute;
                     height: 2px;
                     background-color: black;
                     margin: auto;
                 }
                 
-                .top {
+                #top {
                     top: 6px;
                     width: 28px;
                     margin-left: 3px;
                 }
 
-                .middle {
+                #middle {
                     top: 13px;
                     width: 28px;
                     margin-left: 3px;
                 }
 
-                .bottom {
+                #bottom {
                     bottom: 6px;
                     width: 28px;
                     margin-left: 3px;
