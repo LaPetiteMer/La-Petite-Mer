@@ -79,6 +79,19 @@ window.addEventListener("load", function(e){
 		displayMiddle();
 	});
 
+	// var headerCarousel = document.getElementById('carousel');
+
+	// headerCarousel.carousel();
+
+
+
+	$('#carousel').carousel({
+		interval: 500,
+		pause: "hover"
+	});
+
+	$('#carousel').carousel('cycle');
+
 
 
 }, false);
