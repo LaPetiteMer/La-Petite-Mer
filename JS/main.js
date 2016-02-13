@@ -2,11 +2,13 @@ window.addEventListener("load", function(e){
 
 	var burgerMenu = document.getElementById("burger_menu");
 	var menu = document.getElementById("menu");
+	var linksMenu = menu.getElementsByTagName("a");
 	var burgerTop = document.getElementById("top");
 	var burgerMiddle = document.getElementById("middle");
 	var burgerBottom = document.getElementById("bottom");
 
 	var open = false;
+
 
 // SLIDEMENU 
 
@@ -85,6 +87,16 @@ window.addEventListener("load", function(e){
 		animBurgerMenu();
 	});
 
+	//CLOSE MENU TO THE CLICK ON LINKS
+
+	for (var i = 0; i < linksMenu.length; i++){
+		linksMenu[i].addEventListener("click", function(){
+			playMenu();
+			animBurgerMenu();
+		});
+	}
+
+	//CLOSE MENU WITH ESCAPE
 
 	document.addEventListener("keydown", function(e){
 		var x = event.keyCode;
@@ -93,11 +105,8 @@ window.addEventListener("load", function(e){
 			animBurgerMenu();
 		}
 	})
-	// var headerCarousel = document.getElementById('carousel');
 
-	// headerCarousel.carousel();
-
-
+	// BOOTSTRAP CAROUSEL
 
 	$('#headerCarousel').carousel({
 		interval: 500,
