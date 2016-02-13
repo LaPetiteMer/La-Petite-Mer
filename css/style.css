@@ -64,7 +64,7 @@ li {
   100% {
     -webkit-transform: rotate(0deg); } }
 #navBar {
-  position: relative;
+  position: fixed;
   z-index: 10;
   width: 100%;
   height: 50px;
@@ -78,7 +78,8 @@ li {
 
 #menu {
   border-top: 1px solid white;
-  position: relative;
+  position: fixed;
+  z-index: 9;
   right: 0;
   left: 0; }
   #menu ul {
@@ -107,7 +108,7 @@ li {
   transition: top 0.4s ease-in-out; }
 
 .openMenu {
-  top: 0;
+  top: 50px;
   transition: top 0.4s ease-in-out; }
 
 #burger_menu {
@@ -117,8 +118,8 @@ li {
   width: 36px;
   height: 30px;
   border: 1px solid black;
-  border-color: rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
   margin-top: 10px;
   margin-right: 15px;
   cursor: pointer; }
@@ -132,7 +133,8 @@ li {
       height: 2px;
       background-color: black;
       margin: auto;
-      width: 100%; }
+      width: 100%;
+      border-radius: 3px; }
     #burger_menu div #top {
       top: 6px; }
     #burger_menu div #middle {
@@ -140,14 +142,20 @@ li {
     #burger_menu div #bottom {
       bottom: 6px; }
 
-header img {
-  width: 100%; }
+header {
+  float: left;
+  margin-top: 50px; }
+  header img {
+    width: 100%; }
 
-section aside p:first-of-type {
-  color: #134C9A; }
-section img {
-  max-width: 100%;
-  zoom: 2; }
+section {
+  margin-bottom: 20px;
+  clear: both; }
+  section aside p:first-of-type {
+    color: #134C9A; }
+  section img {
+    max-width: 100%;
+    zoom: 2; }
 
 .advices {
   background-color: #134C9A;
@@ -168,7 +176,7 @@ section img {
 
 /* Dots */
 .slick-slider {
-  margin-bottom: 30px; }
+  /* margin-bottom: 30px;*/ }
 
 .slick-dots {
   margin-top: 20px;
