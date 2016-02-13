@@ -145,6 +145,8 @@ header img {
 
 section aside p:first-of-type {
   color: #134C9A; }
+section img {
+  max-width: 100%; }
 
 .advices {
   background-color: #134C9A;
