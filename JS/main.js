@@ -115,17 +115,34 @@ window.addEventListener("load", function(e){
 	});
 
 	$('#headerCarousel').carousel('cycle');
+	
 
 	//SLICK
 
-	$('#slick').slick({
-		dots: true,
-		arrows: false,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	});
+	var initSlick = function(){
+		$('#slick').slick({
+			mobileFirst: true,
+			dots: true,
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			      breakpoint: 481,
+			      settings: "unslick"
+			    }
+			  ]
+		});
+	}	
 
+	initSlick();
 
+	window.onresize = function(){
+		window.setTimeout(function(){
+			initSlick();
+		}, 1000)
+		
+	}
 
 
 }, false);
