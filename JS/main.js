@@ -30,18 +30,20 @@ window.addEventListener("load", function(e){
 			}
 	};
 
+
+
 	// ANIMATION BURGERMENU
 
 	var animBurgerTop = function(){
 		if(open === true){
 			burgerTop.style.animationName = "slideDown, rotateRight";	
-			burgerTop.style.animationDelay = "0s, 0.2s";	
-			burgerTop.style.animationDuration = "0.2s, 0.2s";
+			burgerTop.style.animationDelay = "0s, 0.1s";	
+			burgerTop.style.animationDuration = "0.1s, 0.1s";
 			burgerTop.style.animationFillMode = "forwards, forwards";
 		}else{
 			burgerTop.style.animationName = "slideDownInverse, rotateRightInverse";	
-			burgerTop.style.animationDelay = "0.2s, 0s";	
-			burgerTop.style.animationDuration = "0.2s, 0.2s";
+			burgerTop.style.animationDelay = "0.1s, 0s";	
+			burgerTop.style.animationDuration = "0.1s, 0.1s";
 			burgerTop.style.animationFillMode = "backwards, backwards";
 		}
 	}
@@ -49,13 +51,13 @@ window.addEventListener("load", function(e){
 	var animBurgerBottom = function(){
 		if(open === true){
 			burgerBottom.style.animationName = "slideUp, rotateLeft";	
-			burgerBottom.style.animationDelay = "0s, 0.2s";	
-			burgerBottom.style.animationDuration = "0.2s, 0.2s";
+			burgerBottom.style.animationDelay = "0s, 0.1s";	
+			burgerBottom.style.animationDuration = "0.1s, 0.1s";
 			burgerBottom.style.animationFillMode = "forwards, forwards";
 		}else{
 			burgerBottom.style.animationName = "slideUpInverse, rotateLeftInverse";	
-			burgerBottom.style.animationDelay = "0.2s, 0s";	
-			burgerBottom.style.animationDuration = "0.2s, 0.2s";
+			burgerBottom.style.animationDelay = "0.1s, 0s";	
+			burgerBottom.style.animationDuration = "0.1s, 0.1s";
 			burgerBottom.style.animationFillMode = "backwards, backwards";
 		}
 	}
@@ -67,30 +69,42 @@ window.addEventListener("load", function(e){
 			}else {
 				burgerMiddle.style.display = "block";
 			}
-		}, 200);
+		}, 100);
+	}
+
+	var animBurgerMenu = function(){
+		animBurgerTop();
+		animBurgerBottom();
+		displayMiddle();
 	}
 
 	// END SLIDEMENU 
 
 	burgerMenu.addEventListener("click", function(){
 		playMenu();
-		animBurgerTop();
-		animBurgerBottom();
-		displayMiddle();
+		animBurgerMenu();
 	});
 
+
+	document.addEventListener("keydown", function(e){
+		var x = event.keyCode;
+		if(x === 27 && open === true){
+			playMenu();
+			animBurgerMenu();
+		}
+	})
 	// var headerCarousel = document.getElementById('carousel');
 
 	// headerCarousel.carousel();
 
 
 
-	$('#carousel').carousel({
+	$('#headerCarousel').carousel({
 		interval: 500,
 		pause: "hover"
 	});
 
-	$('#carousel').carousel('cycle');
+	$('#headerCarousel').carousel('cycle');
 
 
 
