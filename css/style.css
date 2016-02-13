@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 @-webkit-keyframes slideDown {
   from {
     top: 6px; }
@@ -99,31 +106,21 @@
   cursor: pointer; }
   #burger_menu div {
     position: relative;
-    height: 100%; }
+    height: 100%;
+    margin: auto;
+    width: 25px; }
     #burger_menu div #top, #burger_menu div #middle, #burger_menu div #bottom {
       position: absolute;
       height: 2px;
       background-color: black;
-      margin: auto; }
+      margin: auto;
+      width: 100%; }
     #burger_menu div #top {
-      top: 6px;
-      width: 28px;
-      margin-left: 3px; }
+      top: 6px; }
     #burger_menu div #middle {
-      top: 13px;
-      width: 28px;
-      margin-left: 3px; }
+      top: 13px; }
     #burger_menu div #bottom {
-      bottom: 6px;
-      width: 28px;
-      margin-left: 3px; }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-family: 'Open Sans', sans-serif; }
+      bottom: 6px; }
 
 .carousel-indicators {
   z-index: 1; }
