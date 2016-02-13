@@ -3,6 +3,28 @@
     padding: 0;
 }
 
-body {
+html, body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    color: $text;
+}
+
+h1 {
+	font-size: $h1;
+	text-align: center;
+}
+
+h2 {
+	font-size: $h2;
+	text-align: center;
+	color: $primaryColor;
+}
+
+p {
+	font-size: $p;
+	text-align: justify;
+}
+
+li {
+	font-size: $li;
 }

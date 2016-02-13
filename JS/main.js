@@ -87,6 +87,7 @@ window.addEventListener("load", function(e){
 		animBurgerMenu();
 	});
 
+
 	//CLOSE MENU TO THE CLICK ON LINKS
 
 	for (var i = 0; i < linksMenu.length; i++){
@@ -109,11 +110,21 @@ window.addEventListener("load", function(e){
 	// BOOTSTRAP CAROUSEL
 
 	$('#headerCarousel').carousel({
-		interval: 500,
+		interval: 2000,
 		pause: "hover"
 	});
 
 	$('#headerCarousel').carousel('cycle');
+
+	//SLICK
+
+	$('#slick').slick({
+		dots: true,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+
 
 
 

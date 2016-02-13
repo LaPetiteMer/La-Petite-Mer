@@ -1,0 +1,19 @@
+section {
+	aside {
+		p {
+			&:first-of-type {
+				color: $primaryColor;
+			}
+		}
+	}	
+}
+
+#slick {
+	.content_descent {
+		border: 1px solid;
+		border-color: rgba(0, 0, 0, .08);
+		padding: 10px;
+		margin: 0 10px;
+		border-radius: 3px;
+	}
+}
