@@ -8,6 +8,15 @@ section {
 	}	
 }
 
+.advices {
+	background-color: $primaryColor;
+	padding: 30px 0;
+		p {
+			margin: 0;
+			color: $text-light;
+		}
+}
+
 #slick {
 	.content_descent {
 		border: 1px solid;
