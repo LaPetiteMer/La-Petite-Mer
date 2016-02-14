@@ -107,6 +107,12 @@ window.addEventListener("load", function(e){
 		}
 	})
 
+	//CLOSE MENU WITH CLICK OUTSIDE
+
+	//TODO//
+
+
+
 	// BOOTSTRAP CAROUSEL
 
 	$('#headerCarousel').carousel({
