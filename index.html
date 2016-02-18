@@ -198,21 +198,14 @@
 							<p>DESCENTE</p>
 						</div>					
 					</div>
-					<div class="btn-group">
-					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Mini descente, 8km
-					    <div>
-					    	<span class="caret"></span>
-					    </div>
-					  </button>
-					  <ul class="dropdown-menu">
-					    <li><a href="#">Mini descente, 8km</a></li>
-					    <li><a href="#">Maxi mini, 13km</a></li>
-					    <li><a href="#">Grande descente, 24km/32km</a></li>
-					    <li><a href="#">Bivouac, 32km</a></li>
-					    <li><a href="#">Pack, 8km + 24km</a></li>
-					  </ul>
-					</div>
+
+					<select id="descentList">
+							<option value="d1">Mini descente, 8km</option>
+							<option value="d2">Maxi mini, 13km</option>
+							<option value="d3">Grande descente, 24km/32km</option>
+							<option value="d4">Bivouac, 32km</option>
+							<option value="d5">Pack, 8km + 24km</option>
+						</select>
 				</div>
 				
 				<div class="prices_table">
@@ -221,19 +214,12 @@
 							<p>PERSONNE</p>
 						</div>
 					</div>
-					<div class="btn-group">
-					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Adulte
-					    <div>
-					    	<span class="caret"></span>
-						</div>
-					  </button>
-					  <ul class="dropdown-menu">
-					    <li><a href="#">Adulte</a></li>
-					    <li><a href="#">Enfant (7 à 12 ans), 3ème place</a></li>
-					    <li><a href="#">Enfant (7 à 15 ans)</a></li>
-					  </ul>
-					</div>
+		
+						<select id="personList">
+							<option value="p1">Adultes</option>
+							<option value="p2">Enfant (7 à 12 ans), 3ème place</option>
+							<option value="p3">Enfant (7 à 15 ans)</option>
+						</select>
 				</div>
 				
 				
@@ -244,8 +230,8 @@
 						</div>
 					</div>
 					<div class="prices">
-						<div>
-							<p>15€</p>
+						<div id="contentPrices">
+							<p id="test">16€</p>
 						</div>
 					</div>
 				</div>
@@ -261,6 +247,10 @@
 		<script src="JS/bootstrap.js" type="text/javascript"></script>
 		<script src="JS/slick.min.js" type="text/javascript"></script>
 		<script src="JS/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+				
+
+		</script>
 	</body>
   
  
