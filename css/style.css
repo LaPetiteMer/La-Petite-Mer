@@ -217,7 +217,8 @@ select {
 
 #section4 {
   background-color: #134C9A;
-  color: #FFF; }
+  color: #FFF;
+  padding: 40px 0; }
   #section4 p:first-of-type {
     text-align: center;
     margin-bottom: 20px; }
@@ -237,6 +238,43 @@ select {
         color: #134C9A;
         width: 44px;
         font-size: 2rem; }
+
+@keyframes bounce {
+  from {
+    transform: translateY(-3); }
+  to {
+    transform: translateY(-7px); } }
+footer {
+  position: relative;
+  margin-top: 50px; }
+  footer ul {
+    text-align: center; }
+    footer ul li {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      margin: 0 10px; }
+      footer ul li:last-child {
+        position: absolute;
+        right: 30px;
+        animation: bounce 0.4s ease infinite alternate; }
+      footer ul li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #6F6F6E;
+        font-size: 2rem; }
+      footer ul li .facebook:hover {
+        color: #3B5998; }
+      footer ul li .tripadvisor:hover {
+        color: #589442; }
+      footer ul li .google:hover {
+        color: #dc4e41; }
+    footer ul .backToTop a {
+      font-size: 3rem; }
+  footer p {
+    text-align: center; }
 
 .carousel-indicators {
   z-index: 1; }
