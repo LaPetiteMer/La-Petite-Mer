@@ -23,6 +23,9 @@ p {
 li {
   font-size: 1.2rem; }
 
+.clear {
+  clear: both; }
+
 @media (min-width: 481px) {
   html, body {
     font-size: 12px; } }
@@ -247,6 +250,11 @@ select {
         width: 44px;
         font-size: 2rem; }
 
+@media (min-width: 481px) {
+  #section4 .services div {
+    margin-bottom: 20px; }
+    #section4 .services div div {
+      margin-top: 0; } }
 @keyframes bounce {
   from {
     transform: translateY(-3); }

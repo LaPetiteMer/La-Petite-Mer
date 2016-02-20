@@ -29,6 +29,10 @@ li {
 	font-size: $li;
 }
 
+.clear {
+	clear: both;
+}
+
 @media (min-width: 481px){
 	html, body {
 		font-size: 12px;
