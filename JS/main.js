@@ -117,8 +117,8 @@ window.addEventListener("load", function(e){
 	// BOOTSTRAP CAROUSEL
 
 	$('#headerCarousel').carousel({
-		interval: 2000,
-		pause: "hover"
+		interval: 10000,
+		pause: true;
 	});
 
 	$('#headerCarousel').carousel('cycle');

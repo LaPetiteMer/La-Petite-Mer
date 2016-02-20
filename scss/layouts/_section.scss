@@ -18,6 +18,10 @@ section {
 	.row {
 		margin: 0;
 	}
+	.content_descent {
+		padding: 20px;
+		border-radius: 3px;
+	}
 }
 
 .section3 {
@@ -80,16 +84,6 @@ select {
 		}
 }
 
-#slick {
-	.content_descent {
-		/*border: 1px solid;*/
-		/*border-color: rgba(0, 0, 0, .08);*/
-		padding: 20px;
-		/*margin: 0 10px;*/
-		border-radius: 3px;
-	}
-}
-
 #howToPay {
 	background-color: $lightBackground;
 	padding: 20px 0;
@@ -138,7 +132,98 @@ select {
 	
 }
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
+
+	.section1 {
+		#slick {
+			background-image: url("../images/canoe.svg");
+			background-position: 180px 90px;
+			background-position: no-repeat;
+		}
+		&>div {
+			position: relative;
+			border-radius: 5px;
+			top: -150px;
+			padding: 20px;
+			background-color: white;
+		}
+		.content_descent {
+			position: relative;
+			background-color: rgba(0, 0, 0, .08);
+			border: 5px solid white;
+			padding: 10px;
+		}
+		.circle {
+			&:before {
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: $flashColor;
+				bottom: -30px;
+				right: -30px;
+				width: 50px;
+				height: 50px;
+				border: 11px solid white;
+				border-radius: 100%;
+				z-index: 1;
+			}
+		}
+	}
+
+	.advices {
+		position: relative;
+		top: -200px;
+		p {
+			text-align: center;
+		}
+		&:after {
+			content: "";
+			background: url('../images/advices_after.svg') no-repeat center;
+			height: 21px;
+			width: 100%;
+			position: absolute;
+			bottom: -20px;
+			right: 0;
+			left: 0;
+		}
+	}
+
+	.section2 {
+		position: relative;
+		top: -150px;
+	}
+
+	.section3 {
+		position: relative;
+		top: -150px;
+		.table {
+			thead {
+				tr {
+					th {
+						padding: 0;
+						span {
+							display: block;
+							border: 1px solid black;
+							padding: 8px;
+							margin: 5px 5px;
+						}
+					}
+				}
+			}
+			td {
+				padding: 0;
+				span {
+					display: block;
+					border: 1px solid black;
+					padding: 8px;
+					margin: 5px 5px;
+				}
+			}
+			
+		}
+	}
+
 	#section4 {
 		.services {
 			div {

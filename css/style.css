@@ -148,12 +148,100 @@ li {
     #burger_menu div #bottom {
       bottom: 6px; }
 
+@media (min-width: 769px) {
+  #burger_menu {
+    display: none; }
+
+  #navBar {
+    height: 150px;
+    z-index: 0;
+    background-color: transparent;
+    position: inherit; }
+    #navBar a img {
+      width: 150px;
+      height: 150px; }
+
+  #menu {
+    position: inherit;
+    height: 50px;
+    border: none; }
+    #menu ul {
+      /*position: absolute;
+      right: 20px;
+      height: 50px;
+      left: initial;*/
+      text-align: center; }
+      #menu ul li {
+        height: 50px;
+        display: inline-block; }
+        #menu ul li a {
+          position: relative;
+          height: 50px;
+          padding: 0 10px;
+          line-height: 50px;
+          border-top: solid 1px transparent; }
+          #menu ul li a:hover {
+            color: #6F6F6E;
+            /* border-top: solid 1px $flashColor;*/
+            background-color: transparent; }
+          #menu ul li a:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: 1px;
+            width: 0%;
+            background-color: #7AB92F;
+            transition: width 0.2s ease; }
+          #menu ul li a:hover:before {
+            width: 100%; }
+        #menu ul li .home_picto:hover {
+          background-color: transparent;
+          color: #6F6F6E;
+          border-top: solid 1px transparent; } }
 header {
   float: left;
   margin-top: 50px; }
   header img {
     width: 100%; }
 
+.parralax1 {
+  display: none; }
+
+.parralax2 {
+  display: none; }
+
+.parralax3 {
+  display: none; }
+
+@media (min-width: 769px) {
+  header {
+    margin-top: 0;
+    float: none; }
+
+  .parralax1 {
+    display: block;
+    background: url("../images/couv1.jpg") fixed;
+    height: 600px;
+    background-size: cover;
+    background-position: center; }
+
+  .parralax2 {
+    display: block;
+    background: url("../images/couv2.jpg") fixed;
+    height: 600px;
+    background-size: cover;
+    background-position: center; }
+
+  .parralax3 {
+    display: block;
+    background: url("../images/couv3.jpg") fixed;
+    height: 600px;
+    background-size: cover;
+    background-position: center; }
+
+  #headerCarousel img {
+    display: none; } }
 section {
   margin-bottom: 20px;
   clear: both; }
@@ -165,6 +253,9 @@ section {
 
 .section1 .row {
   margin: 0; }
+.section1 .content_descent {
+  padding: 20px;
+  border-radius: 3px; }
 
 .section3 h1 {
   margin-bottom: 50px; }
@@ -211,13 +302,6 @@ select {
     margin: 0;
     color: #FFF; }
 
-#slick .content_descent {
-  /*border: 1px solid;*/
-  /*border-color: rgba(0, 0, 0, .08);*/
-  padding: 20px;
-  /*margin: 0 10px;*/
-  border-radius: 3px; }
-
 #howToPay {
   background-color: #DDD;
   padding: 20px 0; }
@@ -250,7 +334,73 @@ select {
         width: 44px;
         font-size: 2rem; }
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
+  .section1 #slick {
+    background-image: url("../images/canoe.svg");
+    background-position: 180px 90px;
+    background-position: no-repeat; }
+  .section1 > div {
+    position: relative;
+    border-radius: 5px;
+    top: -150px;
+    padding: 20px;
+    background-color: white; }
+  .section1 .content_descent {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.08);
+    border: 5px solid white;
+    padding: 10px; }
+  .section1 .circle:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #7AB92F;
+    bottom: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border: 11px solid white;
+    border-radius: 100%;
+    z-index: 1; }
+
+  .advices {
+    position: relative;
+    top: -200px; }
+    .advices p {
+      text-align: center; }
+    .advices:after {
+      content: "";
+      background: url("../images/advices_after.svg") no-repeat center;
+      height: 21px;
+      width: 100%;
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      left: 0; }
+
+  .section2 {
+    position: relative;
+    top: -150px; }
+
+  .section3 {
+    position: relative;
+    top: -150px; }
+    .section3 .table thead tr th {
+      padding: 0; }
+      .section3 .table thead tr th span {
+        display: block;
+        border: 1px solid black;
+        padding: 8px;
+        margin: 5px 5px; }
+    .section3 .table td {
+      padding: 0; }
+      .section3 .table td span {
+        display: block;
+        border: 1px solid black;
+        padding: 8px;
+        margin: 5px 5px; }
+
   #section4 .services div {
     margin-bottom: 20px; }
     #section4 .services div div {

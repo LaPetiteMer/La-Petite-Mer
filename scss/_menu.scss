@@ -142,3 +142,71 @@
         }             
 }
 
+@media (min-width: 769px) {
+    #burger_menu {
+        display: none;
+    }
+
+    #navBar {
+        height: 150px;
+        z-index: 0;
+        background-color: transparent;
+        position: inherit;
+        a {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    #menu {
+        position: inherit;
+        height: 50px;
+        border: none;
+        ul {
+            /*position: absolute;
+            right: 20px;
+            height: 50px;
+            left: initial;*/
+            text-align: center;
+            li {
+                height: 50px;
+                display: inline-block;
+                a {
+                    position: relative;
+                    height: 50px;
+                    padding: 0 10px;
+                    line-height: 50px;
+                    border-top: solid 1px transparent;
+                    &:hover {
+                        color: $text-color;
+                       /* border-top: solid 1px $flashColor;*/
+                        background-color: transparent;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 0%;
+                        background-color: $flashColor;
+                        transition: width 0.2s ease;
+                    }
+                     &:hover:before {
+                            width: 100%;
+                        }
+                }
+                .home_picto {
+                    &:hover {
+                        background-color: transparent;
+                        color: $text-color;
+                        border-top: solid 1px transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
