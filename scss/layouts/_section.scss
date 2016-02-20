@@ -14,7 +14,16 @@ section {
 	}
 }
 
+.section1 {
+	.row {
+		margin: 0;
+	}
+}
+
 .section3 {
+	h1 {
+		margin-bottom: 50px;
+	}
 	.prices_table {
 		margin-bottom: 5px;
 		font-size: 1.2rem;
@@ -73,10 +82,10 @@ select {
 
 #slick {
 	.content_descent {
-		border: 1px solid;
-		border-color: rgba(0, 0, 0, .08);
-		padding: 10px;
-		margin: 0 10px;
+		/*border: 1px solid;*/
+		/*border-color: rgba(0, 0, 0, .08);*/
+		padding: 20px;
+		/*margin: 0 10px;*/
 		border-radius: 3px;
 	}
 }

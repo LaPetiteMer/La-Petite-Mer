@@ -39,6 +39,9 @@ footer {
 		.backToTop {
 			a {
 				font-size: 3rem;
+				&:hover {
+					color: inherit;
+				}
 			}
 		}
 	}

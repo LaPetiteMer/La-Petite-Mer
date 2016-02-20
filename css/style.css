@@ -23,6 +23,9 @@ p {
 li {
   font-size: 1.2rem; }
 
+@media (min-width: 481px) {
+  html, body {
+    font-size: 12px; } }
 @-webkit-keyframes slideDown {
   from {
     top: 6px; }
@@ -157,6 +160,11 @@ section {
     max-width: 100%;
     zoom: 2; }
 
+.section1 .row {
+  margin: 0; }
+
+.section3 h1 {
+  margin-bottom: 50px; }
 .section3 .prices_table {
   margin-bottom: 5px;
   font-size: 1.2rem; }
@@ -201,10 +209,10 @@ select {
     color: #FFF; }
 
 #slick .content_descent {
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.08);
-  padding: 10px;
-  margin: 0 10px;
+  /*border: 1px solid;*/
+  /*border-color: rgba(0, 0, 0, .08);*/
+  padding: 20px;
+  /*margin: 0 10px;*/
   border-radius: 3px; }
 
 #howToPay {
@@ -273,6 +281,8 @@ footer {
         color: #dc4e41; }
     footer ul .backToTop a {
       font-size: 3rem; }
+      footer ul .backToTop a:hover {
+        color: inherit; }
   footer p {
     text-align: center; }
 
@@ -281,11 +291,6 @@ footer {
 
 .section3 .row {
   margin: 0; }
-
-.section3 .btn-group {
-  width: 100%; }
-.section3 .btn {
-  width: 100%; }
 
 /* Dots */
 .slick-slider {

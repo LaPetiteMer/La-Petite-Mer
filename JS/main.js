@@ -135,7 +135,7 @@ window.addEventListener("load", function(e){
 			slidesToScroll: 1,
 			responsive: [
 			    {
-			      breakpoint: 481,
+			      breakpoint: 480,
 			      settings: "unslick"
 			    }
 			  ]

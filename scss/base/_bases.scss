@@ -28,3 +28,9 @@ p {
 li {
 	font-size: $li;
 }
+
+@media (min-width: 481px){
+	html, body {
+		font-size: 12px;
+	}
+}
