@@ -69,6 +69,26 @@ li {
     -webkit-transform: rotate(-45deg); }
   100% {
     -webkit-transform: rotate(0deg); } }
+@-webkit-keyframes fixedLogo {
+  from {
+    -webkit-transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(-100px); } }
+@-webkit-keyframes fixedLogoReverse {
+  from {
+    -webkit-transform: translateY(45px); }
+  to {
+    -webkit-transform: translateY(0px); } }
+@-webkit-keyframes noFixedLogo {
+  from {
+    -webkit-transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(-100px); } }
+@-webkit-keyframes noFixedLogoReverse {
+  from {
+    -webkit-transform: translateY(45px); }
+  to {
+    -webkit-transform: translateY(0px); } }
 #navBar {
   position: fixed;
   z-index: 10;
@@ -97,6 +117,8 @@ li {
     right: 0; }
     #menu ul li {
       height: 40px; }
+      #menu ul li:first-child {
+        display: none; }
       #menu ul li a {
         padding-left: 20px;
         height: 40px;
@@ -153,6 +175,7 @@ li {
     display: none; }
 
   #navBar {
+    display: none;
     height: 150px;
     z-index: 0;
     background-color: transparent;
@@ -163,25 +186,49 @@ li {
 
   #menu {
     position: inherit;
-    height: 50px;
+    /*height: 50px;*/
     border: none; }
     #menu ul {
       /*position: absolute;
       right: 20px;
       height: 50px;
       left: initial;*/
-      text-align: center; }
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      background-color: transparent;
+      transition: background-color 0.3s ease; }
+      #menu ul #desktopLogo {
+        background-size: contain;
+        left: 30px;
+        top: 0;
+        position: absolute; }
+        #menu ul #desktopLogo:before {
+          content: "";
+          background-color: transparent; }
+      #menu ul .desktopLogoNoFixed {
+        height: 100px;
+        width: 100px; }
+      #menu ul .desktopLogoFixed {
+        background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
+        height: 80px;
+        width: 100px;
+        -webkit-animation-name: "fixedLogoReverse";
+        -webkit-animation-duration: 0.3s;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-fill-mode: forwards; }
       #menu ul li {
         height: 50px;
         display: inline-block; }
         #menu ul li a {
           position: relative;
+          color: #FFF;
           height: 50px;
           padding: 0 10px;
           line-height: 50px;
           border-top: solid 1px transparent; }
           #menu ul li a:hover {
-            color: #6F6F6E;
+            color: #FFF;
             /* border-top: solid 1px $flashColor;*/
             background-color: transparent; }
           #menu ul li a:before {
@@ -197,8 +244,20 @@ li {
             width: 100%; }
         #menu ul li .home_picto:hover {
           background-color: transparent;
-          color: #6F6F6E;
-          border-top: solid 1px transparent; } }
+          color: #FFF;
+          border-top: solid 1px transparent; }
+        #menu ul li .linksFixed {
+          color: #6F6F6E; }
+          #menu ul li .linksFixed:hover {
+            color: #6F6F6E; }
+    #menu .fixedMenu {
+      position: fixed;
+      background-color: white;
+      height: 80px;
+      line-height: 80px; } }
+@media (min-width: 1100px) {
+  #menu ul li:first-child {
+    display: initial; } }
 header {
   float: left;
   margin-top: 50px; }
@@ -218,6 +277,19 @@ header {
   header {
     margin-top: 0;
     float: none; }
+    header .item {
+      position: relative; }
+      header .item:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.3;
+        z-index: 1; }
 
   .parralax1 {
     display: block;
@@ -407,7 +479,7 @@ select {
       margin-top: 0; } }
 @keyframes bounce {
   from {
-    transform: translateY(-3); }
+    transform: translateY(-3px); }
   to {
     transform: translateY(-7px); } }
 footer {

@@ -118,7 +118,7 @@ window.addEventListener("load", function(e){
 
 	$('#headerCarousel').carousel({
 		interval: 10000,
-		pause: true;
+		pause: true,
 	});
 
 	$('#headerCarousel').carousel('cycle');
@@ -211,5 +211,44 @@ window.addEventListener("load", function(e){
 	descentList.onchange = function(){descentChange()};
 	personList.onchange = function(){personChange()};
 	
+
+	//FIXED MENU
+
+	var listMenu = document.getElementById("listMenu");
+	var desktopLogo = document.getElementById("desktopLogo");
+	console.log(listMenu.offsetHeight);
+
+	var addFixedProperties = function(){
+		listMenu.classList.add('fixedMenu');
+		desktopLogo.classList.add('desktopLogoFixed');
+		desktopLogo.classList.remove('desktopLogoNoFixed');
+
+			for (var i = 0; i < linksMenu.length; i++){
+				linksMenu[i].classList.add('linksFixed');
+			}
+		
+	};
+
+	var removeFixedProperties = function(){
+		listMenu.classList.remove('fixedMenu');
+		desktopLogo.classList.remove('desktopLogoFixed');
+		desktopLogo.classList.add('desktopLogoNoFixed');
+
+
+			for (var i = 0; i < linksMenu.length; i++){
+				linksMenu[i].classList.remove('linksFixed');
+			}	
+	};
+
+	var fixedMenu = function(){
+		if(window.pageYOffset > listMenu.offsetHeight / 5){
+			addFixedProperties();
+		}else{
+			removeFixedProperties();
+		}
+	}
+
+	fixedMenu();
+	window.addEventListener('scroll', fixedMenu, false);
 
 }, false);
