@@ -392,7 +392,7 @@ select {
   .section1 > div {
     position: relative;
     border-radius: 5px;
-    top: -150px;
+    /*top: -150px;*/
     padding: 20px;
     background-color: white; }
   .section1 .content_descent {
@@ -416,7 +416,7 @@ select {
 
   .advices {
     position: relative;
-    top: -200px; }
+    top: -45px; }
     .advices p {
       text-align: center; }
     .advices:after {
@@ -431,11 +431,12 @@ select {
 
   .section2 {
     position: relative;
-    top: -150px; }
+    /*top: -150px;*/ }
 
   .section3 {
     position: relative;
-    top: -150px; }
+    margin-bottom: 0;
+    /*top: -150px;*/ }
     .section3 .table thead tr th {
       padding: 0;
       border: none; }
@@ -459,10 +460,33 @@ select {
         line-height: 35px;
         text-align: center; }
 
-  #section4 .services div {
-    margin-bottom: 20px; }
-    #section4 .services div div {
-      margin-top: 0; } }
+  #howToPay {
+    position: relative;
+    top: -5px; }
+
+  #section4 {
+    position: relative;
+    top: -5px;
+    width: 700px;
+    margin: auto; }
+    #section4 .container {
+      width: inherit; }
+    #section4 .services div {
+      margin-bottom: 20px; }
+      #section4 .services div div {
+        margin-top: 0; } }
+@media (min-width: 1200px) {
+  #section4:before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url("../images/couv1.jpg") no-repeat center;
+    background-size: cover;
+    border: 25px solid white;
+    border-radius: 100%;
+    left: -290px;
+    top: 190px; } }
 @keyframes bounce {
   from {
     transform: translateY(-3px); }
@@ -507,6 +531,9 @@ footer {
 
 .section3 .row {
   margin: 0; }
+
+.table {
+  margin-bottom: 0; }
 
 /* Dots */
 .slick-slider {
