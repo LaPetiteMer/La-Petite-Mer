@@ -14,6 +14,7 @@
    </head>
    
 	<body>
+		<div id="home"></div>
 		<nav id="navBar">
 			<a href="#">
 				<img src="images/logos_svg/logo_couleur.svg">
@@ -29,15 +30,15 @@
 		</nav>
 		<nav id="menu" class="closeMenu">
 			<ul id="listMenu">
-				<li><a href="#" id="desktopLogo" class="desktopLogoNoFixed"></a></li>
-				<li><a href="#" class="home_picto"><span class="glyphicon glyphicon-home"></span></a></li>
-				<li><a href="#">Nos descentes</a></li>
-				<li><a href="#">Les parcours</a></li>
-				<li><a href="#">Nos tarifs</a></li>
-				<li><a href="#">Nos services</a></li>
-				<li><a href="#">Photos</a></li>
-				<li><a href="#">Réservation</a></li>
-				<li><a href="#">Partenaires</a></li>
+				<li><a href="#home" id="desktopLogo" class="desktopLogoNoFixed scroll"></a></li>
+				<li><a href="#home" class="home_picto scroll"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li><a href="#section1" class="scroll">Nos descentes</a></li>
+				<li><a href="#section2" class="scroll">Les parcours</a></li>
+				<li><a href="#section3" class="scroll">Nos tarifs</a></li>
+				<li><a href="#section4" class="scroll">Nos services</a></li>
+				<li><a href="#" class="scroll">Photos</a></li>
+				<li><a href="#" class="scroll">Réservation</a></li>
+				<li><a href="#" class="scroll">Partenaires</a></li>
 			</ul>
 		</nav>
 
@@ -89,7 +90,7 @@
 		  </a>
 		</header>
 
-		<section class="container section1">
+		<section id="section1" class="container">
 			<div>
 				<h1>NOS DESCENTES</h1>
 				<aside>
@@ -209,12 +210,12 @@
 			</div>
 		</aside>
 
-		<section class="container section2">
+		<section id="section2" class="container">
 			<h1>LES PARCOURS</h1>
 			<img src="images/plan.svg">
 		</section>
 
-		<section class="container section3">
+		<section id="section3" class="container">
 			<h1>NOS TARIFS</h1>
 			<div class="row hidden-md hidden-lg">
 				<div class="prices_table col-sm-4">
@@ -409,7 +410,7 @@
 				<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
 				<li><a href="#" class="tripadvisor"><i class="fa fa-tripadvisor"></i></a></li>
 				<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-				<li class="backToTop"><a href="#"><i class="fa fa-angle-up"></i></a></li>
+				<li class="backToTop"><a href="#home" class="scroll"><i class="fa fa-angle-up"></i></a></li>
 			</ul>
 			<p>&copy;La Petite Mer | All Rights Reserved</p>
 		</footer>

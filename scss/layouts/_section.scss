@@ -14,7 +14,7 @@ section {
 	}
 }
 
-.section1 {
+#section1 {
 	.row {
 		margin: 0;
 	}
@@ -24,7 +24,7 @@ section {
 	}
 }
 
-.section3 {
+#section3 {
 	h1 {
 		margin-bottom: 50px;
 	}
@@ -63,7 +63,7 @@ section {
 	}
 }
 
-.section3 .prices_table:last-child {
+#section3 .prices_table:last-child {
 	margin: 0;
 }
 
@@ -134,7 +134,7 @@ select {
 
 @media (min-width: 769px) {
 
-	.section1 {
+	#section1 {
 		#slick {
 			background-image: url("../images/canoe.svg");
 			background-position: 180px 90px;
@@ -189,12 +189,12 @@ select {
 		}
 	}
 
-	.section2 {
+	#section2 {
 		position: relative;
 		/*top: -150px;*/
 	}
 
-	.section3 {
+	#section3 {
 		position: relative;
 		margin-bottom: 0;
 		/*top: -150px;*/

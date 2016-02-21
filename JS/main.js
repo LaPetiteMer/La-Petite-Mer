@@ -216,7 +216,6 @@ window.addEventListener("load", function(e){
 
 	var listMenu = document.getElementById("listMenu");
 	var desktopLogo = document.getElementById("desktopLogo");
-	console.log(listMenu.offsetHeight);
 
 	var addFixedProperties = function(){
 		listMenu.classList.add('fixedMenu');
@@ -250,5 +249,19 @@ window.addEventListener("load", function(e){
 
 	fixedMenu();
 	window.addEventListener('scroll', fixedMenu, false);
+
+	//SMOOTH SCROLL
+
+	$(".scroll").click(function(){
+		var page = $(this).attr("href");
+		if(window.innerWidth < 769){
+				$("body, html").animate({scrollTop: $(page).offset().top - 50});
+				return false;
+			}else{
+				$("body, html").animate({scrollTop: $(page).offset().top - 80});
+				return false;
+			}
+		});
+				
 
 }, false);
