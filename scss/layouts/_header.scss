@@ -6,15 +6,27 @@ header {
 		}
 }
 
-.parralax1 {
-		display: none;
-	}
-	.parralax2 {
-		display: none;
-	}
-	.parralax3 {
-		display: none;
-	}
+   /* .parralax1 {
+        display: block;
+        background: url("../images/couv1.jpg") fixed;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+    }
+    .parralax2 {
+        display: block;
+        background: url("../images/couv2.jpg") fixed;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+    }
+    .parralax3 {
+        display: block;
+        background: url("../images/couv3.jpg") fixed;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+    }*/
 
 @media (min-width: 769px) {
     header {
@@ -36,31 +48,10 @@ header {
             }
         }
     }
-    .parralax1 {
-    	display: block;
-    	background: url("../images/couv1.jpg") fixed;
-    	height: 600px;
-    	background-size: cover;
-    	background-position: center;
-    }
-    .parralax2 {
-    	display: block;
-    	background: url("../images/couv2.jpg") fixed;
-    	height: 600px;
-    	background-size: cover;
-    	background-position: center;
-    }
-    .parralax3 {
-    	display: block;
-    	background: url("../images/couv3.jpg") fixed;
-    	height: 600px;
-    	background-size: cover;
-    	background-position: center;
-    }
 
     #headerCarousel {
-    	img {
+    	/*img {
     		display: none;
-    	}
+    	}*/
     }
 }

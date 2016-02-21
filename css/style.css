@@ -71,21 +71,6 @@ li {
     -webkit-transform: rotate(0deg); } }
 @-webkit-keyframes fixedLogo {
   from {
-    -webkit-transform: translateY(0px); }
-  to {
-    -webkit-transform: translateY(-100px); } }
-@-webkit-keyframes fixedLogoReverse {
-  from {
-    -webkit-transform: translateY(45px); }
-  to {
-    -webkit-transform: translateY(0px); } }
-@-webkit-keyframes noFixedLogo {
-  from {
-    -webkit-transform: translateY(0px); }
-  to {
-    -webkit-transform: translateY(-100px); } }
-@-webkit-keyframes noFixedLogoReverse {
-  from {
     -webkit-transform: translateY(45px); }
   to {
     -webkit-transform: translateY(0px); } }
@@ -213,7 +198,7 @@ li {
         background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
         height: 80px;
         width: 100px;
-        -webkit-animation-name: "fixedLogoReverse";
+        -webkit-animation-name: "fixedLogo";
         -webkit-animation-duration: 0.3s;
         -webkit-animation-delay: 0s;
         -webkit-animation-fill-mode: forwards; }
@@ -264,15 +249,27 @@ header {
   header img {
     width: 100%; }
 
-.parralax1 {
-  display: none; }
-
-.parralax2 {
-  display: none; }
-
-.parralax3 {
-  display: none; }
-
+/* .parralax1 {
+     display: block;
+     background: url("../images/couv1.jpg") fixed;
+     height: 600px;
+     background-size: cover;
+     background-position: center;
+ }
+ .parralax2 {
+     display: block;
+     background: url("../images/couv2.jpg") fixed;
+     height: 600px;
+     background-size: cover;
+     background-position: center;
+ }
+ .parralax3 {
+     display: block;
+     background: url("../images/couv3.jpg") fixed;
+     height: 600px;
+     background-size: cover;
+     background-position: center;
+ }*/
 @media (min-width: 769px) {
   header {
     margin-top: 0;
@@ -291,29 +288,10 @@ header {
         opacity: 0.3;
         z-index: 1; }
 
-  .parralax1 {
-    display: block;
-    background: url("../images/couv1.jpg") fixed;
-    height: 600px;
-    background-size: cover;
-    background-position: center; }
-
-  .parralax2 {
-    display: block;
-    background: url("../images/couv2.jpg") fixed;
-    height: 600px;
-    background-size: cover;
-    background-position: center; }
-
-  .parralax3 {
-    display: block;
-    background: url("../images/couv3.jpg") fixed;
-    height: 600px;
-    background-size: cover;
-    background-position: center; }
-
-  #headerCarousel img {
-    display: none; } }
+  #headerCarousel {
+    /*img {
+    	display: none;
+    }*/ } }
 section {
   margin-bottom: 20px;
   clear: both; }
