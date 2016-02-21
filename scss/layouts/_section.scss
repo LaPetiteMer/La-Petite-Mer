@@ -202,22 +202,31 @@ select {
 				tr {
 					th {
 						padding: 0;
+						border: none;
 						span {
 							display: block;
-							border: 1px solid black;
+							border: 1px solid $lightBackground;
 							padding: 8px;
 							margin: 5px 5px;
+							color: $primaryColor;
 						}
 					}
 				}
 			}
 			td {
 				padding: 0;
+				border: none;
 				span {
 					display: block;
-					border: 1px solid black;
+					border: 1px solid $lightBackground;
 					padding: 8px;
 					margin: 5px 5px;
+					height: 55px;
+					color: $primaryColor;
+				}
+				.centerPrices {
+					line-height: 35px;
+					text-align: center;
 				}
 			}
 			

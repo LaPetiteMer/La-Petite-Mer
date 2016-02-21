@@ -437,19 +437,27 @@ select {
     position: relative;
     top: -150px; }
     .section3 .table thead tr th {
-      padding: 0; }
+      padding: 0;
+      border: none; }
       .section3 .table thead tr th span {
         display: block;
-        border: 1px solid black;
+        border: 1px solid #DDD;
         padding: 8px;
-        margin: 5px 5px; }
+        margin: 5px 5px;
+        color: #134C9A; }
     .section3 .table td {
-      padding: 0; }
+      padding: 0;
+      border: none; }
       .section3 .table td span {
         display: block;
-        border: 1px solid black;
+        border: 1px solid #DDD;
         padding: 8px;
-        margin: 5px 5px; }
+        margin: 5px 5px;
+        height: 55px;
+        color: #134C9A; }
+      .section3 .table td .centerPrices {
+        line-height: 35px;
+        text-align: center; }
 
   #section4 .services div {
     margin-bottom: 20px; }
