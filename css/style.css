@@ -171,7 +171,7 @@ li {
 
   #menu {
     position: inherit;
-    /*height: 50px;*/
+    height: 80px;
     border: none; }
     #menu ul {
       /*position: absolute;
@@ -181,23 +181,23 @@ li {
       height: 80px;
       line-height: 80px;
       text-align: center;
-      background-color: transparent;
-      transition: background-color 0.3s ease; }
+      transition: background-color 0.3s ease;
+      /* .desktopLogoNoFixed {
+          height: 100px;
+          width: 100px;
+       }*/ }
       #menu ul #desktopLogo {
+        background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
         background-size: contain;
+        height: 80px;
+        width: 100px;
         left: 30px;
         top: 0;
         position: absolute; }
         #menu ul #desktopLogo:before {
           content: "";
           background-color: transparent; }
-      #menu ul .desktopLogoNoFixed {
-        height: 100px;
-        width: 100px; }
       #menu ul .desktopLogoFixed {
-        background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
-        height: 80px;
-        width: 100px;
         -webkit-animation-name: "fixedLogo";
         -webkit-animation-duration: 0.3s;
         -webkit-animation-delay: 0s;
@@ -207,14 +207,13 @@ li {
         display: inline-block; }
         #menu ul li a {
           position: relative;
-          color: #FFF;
+          /*color: $text-light;*/
           height: 50px;
           padding: 0 10px;
           line-height: 50px;
           border-top: solid 1px transparent; }
           #menu ul li a:hover {
-            color: #FFF;
-            /* border-top: solid 1px $flashColor;*/
+            color: #6F6F6E;
             background-color: transparent; }
           #menu ul li a:before {
             content: "";
@@ -227,10 +226,12 @@ li {
             transition: width 0.2s ease; }
           #menu ul li a:hover:before {
             width: 100%; }
-        #menu ul li .home_picto:hover {
-          background-color: transparent;
-          color: #FFF;
-          border-top: solid 1px transparent; }
+        #menu ul li .home_picto {
+          /* &:hover {
+               background-color: transparent;
+               color:  $text-light;
+               border-top: solid 1px transparent;
+           }*/ }
         #menu ul li .linksFixed {
           color: #6F6F6E; }
           #menu ul li .linksFixed:hover {

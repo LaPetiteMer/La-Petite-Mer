@@ -171,7 +171,7 @@
 
     #menu {
         position: inherit;
-        /*height: 50px;*/
+        height: 80px;
         border: none;
         ul {
             /*position: absolute;
@@ -181,10 +181,12 @@
             height: 80px;
             line-height: 80px;
             text-align: center;
-            background-color: transparent;
             transition: background-color 0.3s ease;
             #desktopLogo {
+                background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
                 background-size: contain;
+                height: 80px;
+                width: 100px;
                 left: 30px;
                 top: 0;
                 position: absolute;
@@ -193,14 +195,11 @@
                     background-color: transparent;
                 }
             }
-            .desktopLogoNoFixed {
+           /* .desktopLogoNoFixed {
                height: 100px;
                width: 100px;
-            }
+            }*/
             .desktopLogoFixed {
-               background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
-               height: 80px;
-               width: 100px;
                -webkit-animation-name: "fixedLogo";
                -webkit-animation-duration: 0.3s;
                -webkit-animation-delay: 0s;
@@ -212,14 +211,14 @@
                 display: inline-block;
                 a {
                     position: relative;
-                    color: $text-light;
+                    /*color: $text-light;*/
                     height: 50px;
                     padding: 0 10px;
                     line-height: 50px;
                     border-top: solid 1px transparent;
                     &:hover {
-                        color: $text-light;
-                       /* border-top: solid 1px $flashColor;*/
+                       
+                        color: $text-color;
                         background-color: transparent;
                     }
                     &:before {
@@ -237,11 +236,11 @@
                         }
                 }
                 .home_picto {
-                    &:hover {
+                   /* &:hover {
                         background-color: transparent;
                         color:  $text-light;
                         border-top: solid 1px transparent;
-                    }
+                    }*/
                 }
                 .linksFixed {
                     color: $text-color;

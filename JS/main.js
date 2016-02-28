@@ -220,7 +220,7 @@ window.addEventListener("load", function(e){
 	var addFixedProperties = function(){
 		listMenu.classList.add('fixedMenu');
 		desktopLogo.classList.add('desktopLogoFixed');
-		desktopLogo.classList.remove('desktopLogoNoFixed');
+		// desktopLogo.classList.remove('desktopLogoNoFixed');
 
 			for (var i = 0; i < linksMenu.length; i++){
 				linksMenu[i].classList.add('linksFixed');
@@ -231,7 +231,7 @@ window.addEventListener("load", function(e){
 	var removeFixedProperties = function(){
 		listMenu.classList.remove('fixedMenu');
 		desktopLogo.classList.remove('desktopLogoFixed');
-		desktopLogo.classList.add('desktopLogoNoFixed');
+		// desktopLogo.classList.add('desktopLogoNoFixed');
 
 
 			for (var i = 0; i < linksMenu.length; i++){
