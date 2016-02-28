@@ -112,13 +112,14 @@ select {
 		margin: 0;
 		div {
 			div {
-				background-color: $lightBackground;
-				width: 44px;
-				height: 44px;
-				border-radius: 100%;
-				margin: auto;
-				margin-bottom: 20px;
-				margin-top: 20px;
+				div {
+					background-color: $lightBackground;
+					width: 44px;
+					height: 44px;
+					border-radius: 100%;
+					margin: auto;
+					margin-bottom: 20px;
+					margin-top: 20px;
 					.pictos {
 						text-align: center;
 						line-height: 44px;
@@ -126,6 +127,7 @@ select {
 						width: 44px;
 						font-size: 2rem;
 					}
+				}
 			}
 		}
 	}
@@ -136,9 +138,8 @@ select {
 
 	#section1 {
 		#slick {
-			background-image: url("../images/canoe.svg");
+			background: url("../images/canoe.svg") no-repeat;
 			background-position: 180px 90px;
-			background-position: no-repeat;
 		}
 		&>div {
 			position: relative;
@@ -147,13 +148,13 @@ select {
 			padding: 20px;
 			background-color: white;
 		}
-		.content_descent {
+		/*.content_descent {
 			position: relative;
 			background-color: rgba(0, 0, 0, .08);
 			border: 5px solid white;
 			padding: 10px;
-		}
-		.circle {
+		}*/
+		/*.circle {
 			&:before {
 				content: "";
 				position: absolute;
@@ -168,10 +169,10 @@ select {
 				border-radius: 100%;
 				z-index: 1;
 			}
-		}
+		}*/
 	}
 
-	.advices {
+	/*.advices {
 		position: relative;
 		top: -45px;
 		p {
@@ -187,7 +188,7 @@ select {
 			right: 0;
 			left: 0;
 		}
-	}
+	}*/
 
 	#section2 {
 		position: relative;
@@ -235,11 +236,15 @@ select {
 	}
 
 	#howToPay {
-		position: relative;
-		top: -5px;
+		background-color: inherit;
 	}
 
-	#section4 {
+	/*#howToPay {
+		position: relative;
+		top: -5px;
+	}*/
+
+	/*#section4 {
 		position: relative;
 		top: -5px;
 		width: 700px;
@@ -255,10 +260,10 @@ select {
 				}
 			}
 		}
-	}
+	}*/
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 	#section4 {
 		&:before {
 			content: "";
@@ -273,4 +278,4 @@ select {
 			top: 190px;
 		}
 	}
-}
+}*/

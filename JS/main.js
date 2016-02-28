@@ -255,10 +255,10 @@ window.addEventListener("load", function(e){
 	$(".scroll").click(function(){
 		var page = $(this).attr("href");
 		if(window.innerWidth < 769){
-				$("body, html").animate({scrollTop: $(page).offset().top - 50});
+				$("body, html").animate({scrollTop: $(page).offset().top - 50}, 1000);
 				return false;
 			}else{
-				$("body, html").animate({scrollTop: $(page).offset().top - 80});
+				$("body, html").animate({scrollTop: $(page).offset().top - 80}, 1000);
 				return false;
 			}
 		});
