@@ -164,7 +164,8 @@ window.addEventListener("load", function(e){
 	  slidesToScroll: 3,
 	  asNavFor: '.slider-for',
 	  centerMode: true,
-	  focusOnSelect: true
+	  focusOnSelect: true,
+	  dots: true
 	});	
 
 	//PRICES 

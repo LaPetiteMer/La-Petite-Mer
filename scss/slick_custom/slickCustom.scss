@@ -82,7 +82,7 @@
     width: 20px;
     height: 20px;
    /* margin-top: -10px;*/
-    bottom: -25px;
+    bottom: 4px;
     padding: 0;
     cursor: pointer;
     color: transparent;
@@ -119,16 +119,6 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-    left: 50%;
-    margin-left: -20px;
-}
-
-.slick-next {
-    left: 50%;
-    margin-right: -20px
 }
 
 .slick-slide {
