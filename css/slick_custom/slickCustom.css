@@ -1,17 +1,21 @@
 /*
 Error: Undefined variable: "$primaryColor".
-        on line 71 of C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss
+        on line 69 of C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss
 
-66:     -moz-osx-font-smoothing: grayscale;
-67: }
-68: .slick-dots li.slick-active button:before {
-69:     opacity: .75;
-70:     color: black;
-71:     background-color: $primaryColor;
-72: }
+64:     -moz-osx-font-smoothing: grayscale;
+65: }
+66: .slick-dots li.slick-active button:before {
+67:     opacity: .75;
+68:     color: black;
+69:     background-color: $primaryColor;
+70: }
+71: 
+72: 
+73: /*arrows*\/
+74: 
 
 Backtrace:
-C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss:71
+C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss:69
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -58,4 +62,4 @@ C:/Ruby22-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primaryColor\".\A         on line 71 of C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss\A \A 66:     -moz-osx-font-smoothing: grayscale;\A 67: }\A 68: .slick-dots li.slick-active button:before {\A 69:     opacity: .75;\A 70:     color: black;\A 71:     background-color: $primaryColor;\A 72: }"; }
+  content: "Error: Undefined variable: \"$primaryColor\".\A         on line 69 of C:\Users\Asus\Documents\la petite mer\site-LPM\scss\slick_custom\slickCustom.scss\A \A 64:     -moz-osx-font-smoothing: grayscale;\A 65: }\A 66: .slick-dots li.slick-active button:before {\A 67:     opacity: .75;\A 68:     color: black;\A 69:     background-color: $primaryColor;\A 70: }\A 71: \A 72: \A 73: /*arrows*/\A 74: "; }

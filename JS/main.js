@@ -150,6 +150,23 @@ window.addEventListener("load", function(e){
 		}, 1000)
 	}
 
+	//PORTFOLIO PHOTOS
+
+	 $('.slider-for').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
+	  asNavFor: '.slider-for',
+	  centerMode: true,
+	  focusOnSelect: true
+	});	
+
 	//PRICES 
 
 	var descentList = document.getElementById('descentList');
@@ -262,6 +279,5 @@ window.addEventListener("load", function(e){
 				return false;
 			}
 		});
-				
 
 }, false);

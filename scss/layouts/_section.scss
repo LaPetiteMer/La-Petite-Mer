@@ -134,6 +134,23 @@ select {
 	
 }
 
+/*VOS PHOTOS*/
+
+#photos {
+	h1 {
+		margin-bottom: 50px;
+	}
+	.slider-nav {
+		margin-top: 5px;
+		div {
+			margin: 0 5px;
+		}
+	}
+}
+
+
+
+
 @media (min-width: 769px) {
 
 	#section1 {
