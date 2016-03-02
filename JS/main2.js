@@ -17,16 +17,12 @@
 			if(navMenu.isOpen){
 				navMenu.close();
 				animationTop.close();
-				window.setTimeout(function(){
-					animationMiddle.close();
-				}, 100);
+				animationMiddle.close();
 				animationBottom.close();
 			}else{
 				navMenu.open();
 				animationTop.open();
-				window.setTimeout(function(){
-					animationMiddle.open();
-				}, 100);
+				animationMiddle.open();
 				animationBottom.open();
 			}
 		}, false);

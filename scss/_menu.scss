@@ -111,6 +111,11 @@
     transition: top 0.4s ease-in-out;
 }
 
+.displayMiddle {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
 #burger_menu {
 	position: absolute;
 	top: 0;
@@ -143,6 +148,11 @@
 
                 #middle {
                     top: 13px;
+                }
+
+                .blockMiddle {
+                    opacity: 1;
+                    transition: opacity 0.1 ease;
                 }
 
                 #bottom {

@@ -37,11 +37,13 @@ var AnimationBurgerMiddle = function(bar){
 }
 
 AnimationBurgerMiddle.prototype.open = function(){
-	this.barMiddle.style.display = "none";
+	this.barMiddle.classList.add("displayMiddle");
+	this.barMiddle.classList.remove("blockMiddle");
 }
 
 AnimationBurgerMiddle.prototype.close = function(){
-	this.barMiddle.style.display = "block";
+	this.barMiddle.classList.remove("displayMiddle");
+	this.barMiddle.classList.add("blockMiddle");
 }
 
 var AnimationBurgerBottom = function(bar){
