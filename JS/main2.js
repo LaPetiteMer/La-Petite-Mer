@@ -8,25 +8,16 @@
 		var burgerMiddle = document.getElementById("middle");
 		var burgerBottom = document.getElementById("bottom");
 
-		var navMenu = new Menu(menu);
-		var animationTop = new AnimationBurgerTop(burgerTop);
-		var animationMiddle = new AnimationBurgerMiddle(burgerMiddle);
-		var animationBottom = new AnimationBurgerBottom(burgerBottom);
+		var myMenu = new Menu(menu, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
+		var menuManager = new MenuManager(myMenu);
 
 		burgerMenu.addEventListener("click", function(){
-			if(navMenu.isOpen){
-				navMenu.close();
-				animationTop.close();
-				animationMiddle.close();
-				animationBottom.close();
+			if(myMenu.isOpen == false){
+				menuManager.open();
 			}else{
-				navMenu.open();
-				animationTop.open();
-				animationMiddle.open();
-				animationBottom.open();
+				menuManager.close();
 			}
 		}, false);
-
 	}, false);
 	
 })();
