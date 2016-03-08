@@ -597,6 +597,9 @@ footer {
   #fotos footer {
     position: absolute;
     bottom: 0; } }
+@media (min-width: 769px) {
+  #blockFotos {
+    margin-top: 0; } }
 .carousel-indicators {
   z-index: 1; }
 
