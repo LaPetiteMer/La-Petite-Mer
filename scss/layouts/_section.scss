@@ -134,32 +134,6 @@ select {
 	
 }
 
-/*VOS PHOTOS*/
-
-#photos {
-	margin-top: 50px;
-	position: relative;
-	h1 {
-		margin-bottom: 50px;
-	}
-	.slider-nav {
-		margin-top: 5px;
-		div {
-			margin: 0 5px;
-		}
-		.slick-next {
-			background: url("../images/arrow_right.svg") no-repeat center;
-			background-size: contain;
-			right: 200px;
-		}
-		.slick-prev {
-			background: url("../images/arrow_left.svg") no-repeat center;
-			background-size: contain;
-			left: 200px;
-		}
-	}
-}
-
 @media (min-width: 769px) {
 
 	#section1 {

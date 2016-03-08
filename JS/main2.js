@@ -19,7 +19,7 @@
 
 		var myMenu = new Menu(menu, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
-		var adultsPrices = new AdultsPrices(descentList, personList, contentPrices);
+		// var adultsPrices = new AdultsPrices(descentList, personList, contentPrices);
 		var menuFixed = new FixedMenu(listMenu, desktopLogo);
 		
 		burgerMenu.addEventListener("click", function(){
@@ -55,12 +55,13 @@
 		$('.scroll').click(function() {
 		    var href = $.attr(this, 'href');
 		    $root.animate({
-		        scrollTop: $(href).offset().top - 50
+		        scrollTop: $(href).offset().top - 80
 		    }, 500, function () {
 		        window.location.hash = href;
 		    });
 		    return false;
 		});
+
 		// descentList.onchange = function(){adultsPrices.calculate()};
 		
 
@@ -68,15 +69,15 @@
 			if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
 				if(menuFixed.isFixed == false){
 					menuFixed.fixed();
-					console.log("test");
 				}
 			}else{
 				if(menuFixed.isFixed == true){
 					menuFixed.noFixed();
-				console.log("test2");
 				}
 			}		
 		}, false)
+
+		slickFotos();
 		
 	}, false);
 	

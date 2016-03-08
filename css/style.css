@@ -393,25 +393,6 @@ select {
         width: 44px;
         font-size: 2rem; }
 
-/*VOS PHOTOS*/
-#photos {
-  margin-top: 50px;
-  position: relative; }
-  #photos h1 {
-    margin-bottom: 50px; }
-  #photos .slider-nav {
-    margin-top: 5px; }
-    #photos .slider-nav div {
-      margin: 0 5px; }
-    #photos .slider-nav .slick-next {
-      background: url("../images/arrow_right.svg") no-repeat center;
-      background-size: contain;
-      right: 200px; }
-    #photos .slider-nav .slick-prev {
-      background: url("../images/arrow_left.svg") no-repeat center;
-      background-size: contain;
-      left: 200px; }
-
 @media (min-width: 769px) {
   #section1 {
     /*.content_descent {
@@ -574,6 +555,32 @@ footer {
   footer p {
     text-align: center; }
 
+#blockFotos {
+  margin-top: 50px;
+  position: relative; }
+  #blockFotos p {
+    margin-bottom: 20px; }
+  #blockFotos h1 {
+    margin-bottom: 50px; }
+  #blockFotos .slider-nav {
+    margin-top: 5px; }
+    #blockFotos .slider-nav div {
+      margin: 0 5px; }
+    #blockFotos .slider-nav .slick-next {
+      background: url("../images/arrow_right.svg") no-repeat center;
+      background-size: contain;
+      right: 50%;
+      margin-right: -40px; }
+    #blockFotos .slider-nav .slick-prev {
+      background: url("../images/arrow_left.svg") no-repeat center;
+      background-size: contain;
+      left: 50%;
+      margin-left: -40px; }
+
+@media (min-width: 481px) and (max-width: 769px) {
+  #fotos footer {
+    position: absolute;
+    bottom: 0; } }
 .carousel-indicators {
   z-index: 1; }
 
@@ -659,7 +666,7 @@ footer {
   width: 20px;
   height: 20px;
   /* margin-top: -10px;*/
-  bottom: 4px;
+  bottom: -30px;
   padding: 0;
   cursor: pointer;
   color: transparent;
