@@ -1,0 +1,28 @@
+#reservation {
+	margin-top: 50px;
+	.form-inline {
+		.form-group {
+			.input-group {
+				margin-top: 10px;
+				.input-group-addon {
+					i {
+						width: 11px;
+						height: 14px;
+					}
+				}
+			}
+			button {
+				margin: auto;
+				display: block;
+				width: 100px;
+				margin-top: 10px;
+			}
+			select {
+				margin-top: 10px;
+			}
+			textarea {
+				margin-top: 10px;
+			}
+		}
+	}
+}
