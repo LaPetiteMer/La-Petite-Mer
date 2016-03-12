@@ -653,6 +653,27 @@ footer {
       margin-top: 10px;
       width: 100%; }
 
+#sectionPartners {
+  margin-top: 50px; }
+  #sectionPartners .row .blockPartner .thumbnail {
+    position: relative; }
+    #sectionPartners .row .blockPartner .thumbnail .caption p {
+      width: 100%; }
+      #sectionPartners .row .blockPartner .thumbnail .caption p a {
+        width: 100%; }
+
+@media (min-width: 481px) {
+  #sectionPartners .row .blockPartner {
+    height: 700px; }
+    #sectionPartners .row .blockPartner .thumbnail {
+      height: 100%; }
+      #sectionPartners .row .blockPartner .thumbnail .caption p a {
+        width: 90%;
+        position: absolute;
+        bottom: 20px; } }
+@media (min-width: 769px) {
+  #sectionPartners .row .blockPartner {
+    height: 670px; } }
 .carousel-indicators {
   z-index: 1; }
 

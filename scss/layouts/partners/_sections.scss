@@ -1,0 +1,52 @@
+#sectionPartners {
+	margin-top: 50px;
+	.row {
+		.blockPartner {
+			.thumbnail {
+				position: relative;
+				.caption {
+					p {
+						width: 100%;
+						a {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 481px) {
+	#sectionPartners {
+		.row {
+			.blockPartner {
+				height: $heightBlockPartners-sm;
+				.thumbnail {
+					height: 100%;
+					.caption {
+						p {
+							a {
+								width: 90%;
+								position: absolute;
+								bottom: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	#sectionPartners {
+		.row {
+			.blockPartner {
+					height: $heightBlockPartners-md;
+				.thumbnail {					
+				}
+			}
+		}
+	}
+}
