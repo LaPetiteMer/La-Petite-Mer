@@ -594,7 +594,7 @@ footer {
       background: transparent;
       opacity: 0.5; }
 
-@media (min-width: 481px) and (max-width: 769px) {
+@media (min-width: 481px) and (max-width: 769px) and (orientation: portrait) {
   #fotos footer {
     position: absolute;
     bottom: 0; } }
