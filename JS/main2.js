@@ -89,6 +89,13 @@
 		}, false)
 
 		slickFotos();
+
+
+		//ZOOM 
+
+		// $(document).ready(function(){
+		//   $('.descentMap').zoom();
+		// });
 		
 	}, false);
 	
