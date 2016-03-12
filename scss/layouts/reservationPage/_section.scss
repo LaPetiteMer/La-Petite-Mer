@@ -1,7 +1,6 @@
 #reservation {
 	margin-top: 50px;
 	h1 {
-		margin-top: 50px;
 		text-transform: uppercase;
 	}
 	P {
@@ -63,5 +62,12 @@
 				width: 100%;
 			}
 		}
+	}
+}
+
+
+@media (min-width: 769px) {
+	#reservation {
+		margin-top: 0;
 	}
 }

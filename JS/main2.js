@@ -19,7 +19,6 @@
 
 		var myMenu = new Menu(menu, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
-		// var adultsPrices = new AdultsPrices(descentList, personList, contentPrices);
 		var menuFixed = new FixedMenu(listMenu, desktopLogo);
 		
 		burgerMenu.addEventListener("click", function(){
@@ -55,7 +54,7 @@
 		$('.scroll').click(function() {
 		    var href = $.attr(this, 'href');
 		    $root.animate({
-		        scrollTop: $(href).offset().top - 80
+		        scrollTop: $(href).offset().top - 50
 		    }, 500, function () {
 		        window.location.hash = href;
 		    });

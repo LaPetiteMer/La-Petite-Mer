@@ -9,7 +9,8 @@ html, body {
 
 h1 {
   font-size: 1.8rem;
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
 
 h2 {
   font-size: 1.4rem;
@@ -333,6 +334,11 @@ section {
       padding-left: 4px; }
       #section3 .prices_table .prices #contentPrices p {
         margin: 0; }
+  #section3 .prices_table select {
+    height: 40px;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    cursor: pointer; }
 #section3 .prices_titles {
   padding: 0; }
   #section3 .prices_titles div {
@@ -347,13 +353,6 @@ section {
 
 #section3 .prices_table:last-child {
   margin: 0; }
-
-select {
-  width: 100%;
-  height: 40px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  cursor: pointer; }
 
 .advices {
   background-color: #134C9A;
@@ -373,7 +372,7 @@ select {
 #section4 {
   background-color: #134C9A;
   color: #FFF;
-  padding: 40px 0; }
+  padding-bottom: 40px; }
   #section4 p:first-of-type {
     text-align: center;
     margin-bottom: 20px; }
@@ -604,7 +603,6 @@ footer {
 #reservation {
   margin-top: 50px; }
   #reservation h1 {
-    margin-top: 50px;
     text-transform: uppercase; }
   #reservation P {
     width: 80%;
@@ -653,17 +651,23 @@ footer {
       margin-top: 10px;
       width: 100%; }
 
+@media (min-width: 769px) {
+  #reservation {
+    margin-top: 0; } }
 #sectionPartners {
   margin-top: 50px; }
-  #sectionPartners .row .blockPartner .thumbnail {
-    position: relative; }
-    #sectionPartners .row .blockPartner .thumbnail .caption p {
-      width: 100%; }
-      #sectionPartners .row .blockPartner .thumbnail .caption p a {
+  #sectionPartners .row {
+    margin-top: 30px; }
+    #sectionPartners .row .blockPartner .thumbnail {
+      position: relative; }
+      #sectionPartners .row .blockPartner .thumbnail .caption p {
         width: 100%; }
+        #sectionPartners .row .blockPartner .thumbnail .caption p a {
+          width: 100%; }
 
 @media (min-width: 481px) {
   #sectionPartners .row .blockPartner {
+    margin-bottom: 20px;
     height: 700px; }
     #sectionPartners .row .blockPartner .thumbnail {
       height: 100%; }
@@ -672,8 +676,10 @@ footer {
         position: absolute;
         bottom: 20px; } }
 @media (min-width: 769px) {
-  #sectionPartners .row .blockPartner {
-    height: 670px; } }
+  #sectionPartners {
+    margin-top: 0; }
+    #sectionPartners .row .blockPartner {
+      height: 670px; } }
 .carousel-indicators {
   z-index: 1; }
 

@@ -1,6 +1,7 @@
 #sectionPartners {
 	margin-top: 50px;
 	.row {
+		margin-top: 30px;
 		.blockPartner {
 			.thumbnail {
 				position: relative;
@@ -21,6 +22,7 @@
 	#sectionPartners {
 		.row {
 			.blockPartner {
+				margin-bottom: 20px;
 				height: $heightBlockPartners-sm;
 				.thumbnail {
 					height: 100%;
@@ -41,6 +43,7 @@
 
 @media (min-width: 769px) {
 	#sectionPartners {
+		margin-top: 0;
 		.row {
 			.blockPartner {
 					height: $heightBlockPartners-md;
