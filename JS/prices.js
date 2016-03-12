@@ -50,18 +50,14 @@ PriceCalculator.calculate = function(descente, person){
 			return 0;
 			break;
 	}
-
-	   // if(this.descent === "d1"){
-	   // 	return 16;
-	   //  }else if(this.descent === "d2"){
-	   //      console.log("test1");
-	   // 	 this.price.innerHTML = "<p>20&#128;</p>";
-	   //  }else if(this.descent === "d3" && this.person == "p1"){
-	   //      console.log("test2");
-	   // 	 this.price.innerHTML = "<p>24&#128;</p>";
-	   //  }else if(this.descent === "d4" && this.person == "p1"){
-	   // 	 this.price.innerHTML = "<p>35&#128;</p>";
-	   //  }else if(this.descent === "d5" && this.person == "p1"){
-	   // 	 this.price.innerHTML = "<p>34&#128;</p>";
-	   //  }
 }
+
+function updatePrices() {
+	var priceElm = document.getElementById("contentPrice");
+	var descenteValue = descentList.value;
+	var personValue = personList.value;
+	priceElm.innerHTML = `${PriceCalculator.calculate(descenteValue, personValue)} €`;
+}
+
+descentList.addEventListener("change", updatePrices, false);
+personList.addEventListener("change", updatePrices, false);

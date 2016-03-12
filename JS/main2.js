@@ -60,15 +60,7 @@
 		    return false;
 		});
 
-		function updatePrices() {
-			var priceElm = document.getElementById("contentPrice");
-			var descenteValue = descentList.value;
-			var personValue = personList.value;
-			priceElm.innerHTML = `${PriceCalculator.calculate(descenteValue, personValue)} €`;
-		}
 
-		descentList.addEventListener("change", updatePrices, false);
-		personList.addEventListener("change", updatePrices, false);
 
 		//ON LOAD
 		if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
