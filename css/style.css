@@ -714,6 +714,7 @@ footer {
   padding: 5px;
   cursor: pointer;
   color: transparent;
+  background-color: #DDD;
   border: 0;
   outline: none; }
 
