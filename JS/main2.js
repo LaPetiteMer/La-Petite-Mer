@@ -10,7 +10,6 @@
 		var burgerBottom = document.getElementById("bottom");
 		var descentList = document.getElementById('descentList');
 		var personList = document.getElementById('personList');
-		var contentPrices = document.getElementById('contentPrices');
 		var $root = $('html, body');
 		var listMenu = document.getElementById("listMenu");
 		var desktopLogo = document.getElementById("desktopLogo");
@@ -36,7 +35,7 @@
 		}
 
 
-		document.addEventListener("keydown", function(e){
+		window.addEventListener("keydown", function(e){
 			var x = event.keyCode;
 			if(x == 27 && menuManager.menu.isOpen === true){
 				menuManager.close();
@@ -61,9 +60,15 @@
 		    return false;
 		});
 
-		// descentList.onchange = function(){adultsPrices.calculate()};
-		
+		function updatePrices() {
+			var priceElm = document.getElementById("contentPrice");
+			var descenteValue = descentList.value;
+			var personValue = personList.value;
+			priceElm.innerHTML = `${PriceCalculator.calculate(descenteValue, personValue)} €`;
+		}
 
+		descentList.addEventListener("change", updatePrices, false);
+		personList.addEventListener("change", updatePrices, false);
 
 		//ON LOAD
 		if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
