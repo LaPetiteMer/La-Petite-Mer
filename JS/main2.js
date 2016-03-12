@@ -64,6 +64,13 @@
 		// descentList.onchange = function(){adultsPrices.calculate()};
 		
 
+
+		//ON LOAD
+		if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
+			menuFixed.fixed();
+		}
+
+		//ON SCROLL
 		window.addEventListener('scroll', function(){
 			if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
 				if(menuFixed.isFixed == false){
