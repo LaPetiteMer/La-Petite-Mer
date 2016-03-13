@@ -89,12 +89,8 @@
             $zoomIn: $(".zoom-in"),
             $zoomOut: $(".zoom-out"),
             $reset: $(".reset"),
-            
-
-           
-            // $reset: $section.find(".reset")
           });
-		
+	
 	}, false);
 	
 
