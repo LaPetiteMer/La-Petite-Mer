@@ -578,11 +578,15 @@ footer {
     margin-bottom: 20px; }
   #blockFotos h1 {
     margin-bottom: 50px; }
+  #blockFotos .slider-for div img {
+    max-width: 100%; }
   #blockFotos .slider-nav {
     margin-top: 5px; }
     #blockFotos .slider-nav div {
       margin: 0 5px;
       position: relative; }
+      #blockFotos .slider-nav div img {
+        max-width: 100%; }
     #blockFotos .slider-nav .slick-next {
       background: url("../images/arrow_right.svg") no-repeat center;
       background-size: contain;

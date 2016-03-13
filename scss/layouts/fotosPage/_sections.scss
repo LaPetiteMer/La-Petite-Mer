@@ -8,11 +8,21 @@
 	h1 {
 		margin-bottom: 50px;
 	}
+	.slider-for {
+		div {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
 	.slider-nav {
 		margin-top: 5px;
 		div {
 			margin: 0 5px;
 			position: relative;
+			img {
+				max-width: 100%;
+			}
 		}
 		.slick-next {
 			background: url("../images/arrow_right.svg") no-repeat center;
