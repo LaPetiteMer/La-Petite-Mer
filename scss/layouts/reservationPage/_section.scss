@@ -69,5 +69,11 @@
 @media (min-width: 769px) {
 	#reservation {
 		margin-top: 0;
+		p {
+			width: 50%;
+		}
+		.form-inline {
+			width: 50%;
+		}
 	}
 }
