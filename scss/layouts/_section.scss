@@ -21,15 +21,19 @@ section {
 }
 
 #section2 {
-	.panzoom {
-		img {
-			max-width: 100%;
-		}
+	.blockPanzoom {
+		height: 400px; 
+		.panzoom {
+			img {
+				max-width: 100%;
+				height: 400px;
+				line-height: 400px;
+			}
+		}	
 	}
 	.btn-group {
 		position: relative;
 		z-index: 99;
-		bottom: 10px;
 		left: 50%;
 		margin-left: -100px;
 		button {

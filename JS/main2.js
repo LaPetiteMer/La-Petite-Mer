@@ -44,11 +44,17 @@
 
 		initSlick();
 
-		window.onresize = function(){
+		// window.onresize = function(){
+		// 	// window.setTimeout(function(){
+		// 	// 	initSlick();
+		// 	// }, 1000)
+		// }
+
+		window.addEventListener("resize", function(){
 			window.setTimeout(function(){
 				initSlick();
 			}, 1000)
-		}
+		}, false);
 
 		$('.scroll').click(function() {
 		    var href = $.attr(this, 'href');
@@ -89,6 +95,7 @@
             $zoomIn: $(".zoom-in"),
             $zoomOut: $(".zoom-out"),
             $reset: $(".reset"),
+            contain: 'invert'
           });
 	
 	}, false);
