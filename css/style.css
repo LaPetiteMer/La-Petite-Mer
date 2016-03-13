@@ -323,8 +323,6 @@ section {
   color: #FFF;
   background-color: #134C9A; }
 #section2 .btn-group {
-  position: relative;
-  z-index: 99;
   left: 50%;
   margin-top: 10px;
   margin-left: -100px; }
