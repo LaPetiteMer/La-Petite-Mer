@@ -69,13 +69,15 @@
 
 
 		//ON LOAD
-		if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
+		if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
 			menuFixed.fixed();
 		}
 
-		//ON SCROLL
+		console.log(menu.offsetHeight);
+
+		// //ON SCROLL
 		window.addEventListener('scroll', function(){
-			if(window.pageYOffset > menuFixed.listMenu.offsetHeight / 2){
+			if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
 				if(menuFixed.isFixed == false){
 					menuFixed.fixed();
 				}
