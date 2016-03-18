@@ -73,8 +73,6 @@
 			menuFixed.fixed();
 		}
 
-		console.log(menu.offsetHeight);
-
 		// //ON SCROLL
 		window.addEventListener('scroll', function(){
 			if(window.pageYOffset > window.innerHeight - menu.offsetHeight){

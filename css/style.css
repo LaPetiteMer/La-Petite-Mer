@@ -265,6 +265,17 @@ header {
   */
   margin-top: 50px;
   height: 60vh; }
+  header:before {
+    content: "";
+    width: 275px;
+    height: 100px;
+    left: 50%;
+    margin-left: -137.5px;
+    top: 100px;
+    z-index: 99;
+    background: url("../images/logos_svg/logo_white.svg") no-repeat center;
+    position: absolute;
+    background-size: contain; }
   header img {
     width: 100%; }
 
