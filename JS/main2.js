@@ -13,20 +13,29 @@
 		var $root = $('html, body');
 		var listMenu = document.getElementById("listMenu");
 		var desktopLogo = document.getElementById("desktopLogo");
+		var navbar = document.getElementById("navBar");
+		var body = document.body;
+		var logo = document.getElementById("logo");
 
-
-		var myMenu = new Menu(menu, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
+		var myMenu = new Menu(menu, body, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
 		var menuFixed = new FixedMenu(listMenu);
+		var navbar = new FixedMenu(navbar);
 		var myLogo = new Logo(desktopLogo);
 		
 		burgerMenu.addEventListener("click", function(){
-			if(menuManager.menu.isOpen == false){
-				menuManager.open();
-			}else{
-				menuManager.close();
+			if (window.innerWidth < 769) {
+				if(menuManager.menu.isOpen == false){
+					menuManager.open();
+				}else{
+					menuManager.close();
+				}
 			}
 		}, false);
+
+		if (window.innerWidth > 768) {
+			body.classList.remove("resetBody");
+		}
 
 		for (var i = 0; i < linksMenu.length; i++){
 			linksMenu[i].addEventListener("click", function(){
@@ -68,9 +77,12 @@
 
 
 
+
 		//ON LOAD
 		if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
 			menuFixed.fixed();
+		} else {
+			menuFixed.noFixed();
 		}
 
 		// //ON SCROLL
@@ -81,7 +93,14 @@
 				}
 			}else{
 				menuFixed.noFixed();
-			}		
+			}	
+
+				if (window.pageYOffset > window.innerHeight * 0.6) {
+					navbar.fixed();
+				} else {
+					navbar.noFixed();
+				}	
+			
 		}, false);
 
 
@@ -107,14 +126,21 @@
 				if (myLogo.isShow === false) {
 					myLogo.show();
 					myLogo.isShow = true;
-					console.log('show');
-				}
-			} else {
+				} else {
 				if (myLogo.isShow === true) {
 					myLogo.isShow = false;
-					console.log('hide');
 					myLogo.hide();
+					}
 				}
+			}
+			if (window.innerWidth > 768) {
+				body.classList.remove("resetBody");
+			}
+
+			if (window.innerWidth < 769) {
+				logo.classList.remove("homeLogo");
+			} else {
+				logo.classList.add("homeLogo");
 			}
 		}, false);
 
@@ -122,12 +148,10 @@
 				if (myLogo.isShow === false) {
 					myLogo.show();
 					myLogo.isShow = true;
-					console.log('show');
 				}
 			} else {
 				if (myLogo.isShow === true) {
 					myLogo.isShow = false;
-					console.log('hide');
 					myLogo.hide();
 				}
 			}

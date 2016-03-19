@@ -23,11 +23,12 @@ Logo.prototype.hide = function() {
 FixedMenu.prototype.fixed = function(){
 	this.isFixed = true;
 	this.listMenu.classList.add('fixedMenu');
-	
+	this.listMenu.classList.remove('noFixed');
 }
 
 FixedMenu.prototype.noFixed = function(){
 	this.isFixed = false;
 	this.listMenu.classList.remove('fixedMenu');
+	this.listMenu.classList.add('noFixed');
 }
 

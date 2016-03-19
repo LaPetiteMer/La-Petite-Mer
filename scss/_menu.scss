@@ -39,15 +39,14 @@
 }
 
 @-webkit-keyframes fixedLogo{
-  from {-webkit-transform: translateY(45px);}
+  from {-webkit-transform: translateY(65px);}
   to{-webkit-transform: translateY(0px);}
 }
 
+
 #navBar {
-    position: fixed;
     z-index: 10;
     width: 100%;
-    top: 0;
     height: 50px;
     box-shadow: 0px 1px 3px #888888;
     background-color: white;
@@ -61,22 +60,34 @@
             }
         }    
 }
+.fixedMenu {
+    position: fixed;
+    top: 0;
+}
 
+.noFixed {
+    position: absolute;
+    margin-top: -50px;
+}
 
 
 #menu {
     border-top: 1px solid white;
-    position: fixed;
     z-index:9;
-    right: 0;
-    left: 0;	
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
         ul {
             margin: 0;
             position: absolute; 
             background-color: white;
             z-index: 2;
             left: 0;
-            right: 0;	  
+            right: 0;	
+            list-style: none;
+            height: 100%;  
+            margin-top: 50px;
             li {
                 height: 40px;
                 /*&:first-child {
@@ -127,16 +138,21 @@
         }
 }
 
-.closeMenu {
-    top: -280px;
-    transition: top 0.4s ease-in-out;
+.pushMenu {
+    right: 0;
+    transition: right 0.4s ease;
 }
 
-.openMenu {
+.closeMenu {
+    right: -50%;
+    transition: right 0.4s ease;
+}
+
+/*.openMenu {
     top: 50px;
     transition: top 0.4s ease-in-out;
 }
-
+*/
 .displayMiddle {
     opacity: 0;
     transition: opacity 0.1s ease;
@@ -215,6 +231,8 @@
             height: 80px;
             line-height: 80px;
             text-align: center;
+            background-color: white;
+            margin-top: 0;
             transition: background-color 0.3s ease;
             li {
                 height: 50px;
@@ -264,11 +282,16 @@
         }
         .fixedMenu {
             position: fixed;
-            background-color: white;
+            /*background-color: white;
             height: 80px;
             line-height: 80px;
-            z-index: 10;
+            z-index: 10;*/
             top: 0;
+        }
+        .noFixed {
+            position: absolute;
+            top: 100%;
+            margin-top: -80px;
         }
     }
 }
