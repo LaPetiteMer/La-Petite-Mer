@@ -15,10 +15,10 @@
 		var desktopLogo = document.getElementById("desktopLogo");
 
 
-
 		var myMenu = new Menu(menu, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
-		var menuFixed = new FixedMenu(listMenu, desktopLogo);
+		var menuFixed = new FixedMenu(listMenu);
+		var myLogo = new Logo(desktopLogo);
 		
 		burgerMenu.addEventListener("click", function(){
 			if(menuManager.menu.isOpen == false){
@@ -80,11 +80,57 @@
 					menuFixed.fixed();
 				}
 			}else{
-				if(menuFixed.isFixed == true){
-					menuFixed.noFixed();
-				}
+				menuFixed.noFixed();
 			}		
-		}, false)
+		}, false);
+
+
+
+		window.addEventListener('scroll', function(){
+			if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
+				if (myLogo.isShow === false) {
+					myLogo.show();
+					myLogo.isShow = true;
+					console.log('show');
+				}
+			} else {
+				if (myLogo.isShow === true) {
+					myLogo.isShow = false;
+					console.log('hide');
+					myLogo.hide();
+				}
+			}
+		}, false);
+
+		window.addEventListener('resize', function(){
+			if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
+				if (myLogo.isShow === false) {
+					myLogo.show();
+					myLogo.isShow = true;
+					console.log('show');
+				}
+			} else {
+				if (myLogo.isShow === true) {
+					myLogo.isShow = false;
+					console.log('hide');
+					myLogo.hide();
+				}
+			}
+		}, false);
+
+		if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
+				if (myLogo.isShow === false) {
+					myLogo.show();
+					myLogo.isShow = true;
+					console.log('show');
+				}
+			} else {
+				if (myLogo.isShow === true) {
+					myLogo.isShow = false;
+					console.log('hide');
+					myLogo.hide();
+				}
+			}
 
 		slickFotos();
 

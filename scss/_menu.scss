@@ -79,10 +79,10 @@
             right: 0;	  
             li {
                 height: 40px;
-                &:first-child {
+                /*&:first-child {
                     display: none;
-                }
-                a{
+                }*/
+                a {
                     padding-left: 20px;
                     height: 40px;
                     line-height: 40px;
@@ -94,10 +94,36 @@
                         background-color: #134C9A;
                         color: white;
                     }
-                    
                 }
-                
             }
+            .hideLogo {
+                position: absolute;
+                background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
+                opacity: 0;
+                background-size: contain;
+                height: 80px;
+                width: 100px;
+                left: 30px;
+                 transition: opacity 0.4s ease;
+            }
+            .showLogo {
+               -webkit-animation-name: "fixedLogo";
+               -webkit-animation-duration: 0.3s;
+               -webkit-animation-delay: 0s;
+               -webkit-animation-fill-mode: forwards;
+                background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
+                background-size: contain;
+                position: absolute;
+                height: 80px;
+                width: 100px;
+                left: 30px;
+                top: 0;
+                opacity: 1;
+                &:before {
+                    content: "";
+                    background-color: transparent;
+                }
+            }   
         }
 }
 
@@ -186,38 +212,10 @@
         border: none;
         margin-top: -80px;
         ul {
-            /*position: absolute;
-            right: 20px;
-            height: 50px;
-            left: initial;*/
             height: 80px;
             line-height: 80px;
             text-align: center;
             transition: background-color 0.3s ease;
-            #desktopLogo {
-                background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
-                background-size: contain;
-                height: 80px;
-                width: 100px;
-                left: 30px;
-                top: 0;
-                position: absolute;
-                &:before {
-                    content: "";
-                    background-color: transparent;
-                }
-            }
-           /* .desktopLogoNoFixed {
-               height: 100px;
-               width: 100px;
-            }*/
-            .desktopLogoFixed {
-               -webkit-animation-name: "fixedLogo";
-               -webkit-animation-duration: 0.3s;
-               -webkit-animation-delay: 0s;
-               -webkit-animation-fill-mode: forwards;
-               
-            }
             li {
                 height: 50px;
                 display: inline-block;
@@ -229,7 +227,6 @@
                     line-height: 50px;
                     border-top: solid 1px transparent;
                     &:hover {
-                       
                         color: $text-color;
                         background-color: transparent;
                     }
@@ -246,6 +243,9 @@
                      &:hover:before {
                             width: 100%;
                         }
+                }
+                #desktopLogo {
+                    position: absolute;
                 }
                 .home_picto {
                    /* &:hover {
@@ -277,9 +277,9 @@
     #menu {
         ul {
             li {
-                &:first-child {
+                /*&:first-child {
                     display: initial;
-                }
+                }*/
             }
         }
        
