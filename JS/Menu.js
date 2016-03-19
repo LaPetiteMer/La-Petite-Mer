@@ -9,14 +9,17 @@ var Menu = function(myMenu, myBody, myBurger, barTop, barMiddle, barBottom){
 	this.isOpen = false;
 }
 
+var Logo = function(newLogo) {
+	this.newLogo = newLogo;
+	this.isShow = false;
+}
+
 var MenuManager = function(menu){
 	this.menu = menu;
 }
 
 MenuManager.prototype.open = function(){
 		this.menu.isOpen = true;
-		this.menu.myMenu.className = "pushMenu";
-		this.menu.myBody.className = "pushBody";
 		this.menu.barTop.style.animationName = "slideDown, rotateRight";
 		this.menu.barTop.style.animationDelay = "0s, 0.1s";
 		this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
@@ -31,8 +34,6 @@ MenuManager.prototype.open = function(){
 
 MenuManager.prototype.close = function(){
 		this.menu.isOpen = false;
-		this.menu.myMenu.className = "closeMenu";
-		this.menu.myBody.className = "resetBody";
 		this.menu.barTop.style.animationName = "slideDownInverse, rotateRightInverse";	
 		this.menu.barTop.style.animationDelay = "0.1s, 0s";	
 		this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
@@ -43,5 +44,40 @@ MenuManager.prototype.close = function(){
 		this.menu.barBottom.style.animationDelay = "0.1s, 0s";	
 		this.menu.barBottom.style.animationDuration = "0.1s, 0.1s";
 		this.menu.barBottom.style.animationFillMode = "backwards, backwards";
+}
+
+MenuManager.prototype.pushMenu = function() {
+	this.menu.myMenu.className = "pushMenu";
+	this.menu.myBody.className = "pushBody";
+}
+
+MenuManager.prototype.pullMenu = function() {
+	this.menu.myMenu.className = "closeMenu";
+	this.menu.myBody.className = "resetBody";
+	console.log('test');
+}
+
+MenuManager.prototype.removeBodyClass = function() {
+	this.menu.myBody.classList.remove("resetBody");
+}
+
+Logo.prototype.headerShow = function() {
+	this.newLogo.classList.add("homeLogo");
+}
+
+Logo.prototype.headerHide = function() {
+	this.newLogo.classList.remove("homeLogo");
+}
+
+Logo.prototype.navbarShow = function() {
+	this.isShow = true;
+	this.newLogo.classList.add('showLogo');
+	this.newLogo.classList.remove('hideLogo');
+}
+
+Logo.prototype.navbarHide = function() {
+	this.isShow = false;
+	this.newLogo.classList.remove('showLogo');
+	this.newLogo.classList.add('hideLogo');
 }
 

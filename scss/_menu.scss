@@ -44,7 +44,7 @@
 }
 
 
-#navBar {
+#navbar {
     z-index: 10;
     width: 100%;
     height: 50px;
@@ -135,6 +135,9 @@
                     background-color: transparent;
                 }
             }   
+            .displayLogo {
+                display: none;
+            }
         }
 }
 
@@ -208,7 +211,7 @@
         display: none;
     }
 
-    #navBar {
+    #navbar {
         display: none;
         height: 150px;
         z-index: 0;
