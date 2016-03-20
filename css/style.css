@@ -669,9 +669,11 @@ footer {
   #fotos footer {
     position: absolute;
     bottom: 0; } }
-@media (min-width: 769px) {
-  #blockFotos {
-    margin-top: 0; } }
+/*@media (min-width: 769px){
+	#blockFotos {
+		margin-top: 0;
+	}
+}*/
 #reservation {
   margin-top: 50px; }
   #reservation h1 {
@@ -725,7 +727,7 @@ footer {
 
 @media (min-width: 769px) {
   #reservation {
-    margin-top: 0; }
+    /*margin-top: 0;*/ }
     #reservation p {
       width: 50%; }
     #reservation .form-inline {
@@ -753,7 +755,7 @@ footer {
         bottom: 20px; } }
 @media (min-width: 769px) {
   #sectionPartners {
-    margin-top: 0; }
+    /*	margin-top: 0;*/ }
     #sectionPartners .row .blockPartner {
       height: 670px; } }
 .carousel-indicators {
