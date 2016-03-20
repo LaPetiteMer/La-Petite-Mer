@@ -9,7 +9,7 @@ var Menu = function(myMenu, myBody, myBurger, barTop, barMiddle, barBottom){
 	this.isOpen = false;
 }
 
-var Logo = function(newLogo) {
+var NavbarLogo = function(newLogo) {
 	this.newLogo = newLogo;
 	this.isShow = false;
 }
@@ -61,23 +61,17 @@ MenuManager.prototype.removeBodyClass = function() {
 	this.menu.myBody.classList.remove("resetBody");
 }
 
-Logo.prototype.headerShow = function() {
-	this.newLogo.classList.add("homeLogo");
-}
 
-Logo.prototype.headerHide = function() {
-	this.newLogo.classList.remove("homeLogo");
-}
+//LOGO MENU
 
-Logo.prototype.navbarShow = function() {
+NavbarLogo.prototype.navbarShow = function() {
 	this.isShow = true;
 	this.newLogo.classList.add('showLogo');
 	this.newLogo.classList.remove('hideLogo');
 }
 
-Logo.prototype.navbarHide = function() {
+NavbarLogo.prototype.navbarHide = function() {
 	this.isShow = false;
 	this.newLogo.classList.remove('showLogo');
 	this.newLogo.classList.add('hideLogo');
 }
-

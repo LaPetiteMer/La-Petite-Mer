@@ -308,21 +308,23 @@ header {
   header img {
     width: 100%; }
 
-#bg_header div {
-  background: url("../images/couv3.jpg") center;
-  height: 100%;
-  background-size: cover;
-  position: fixed;
-  width: 100%; }
-#bg_header .homeLogo {
-  width: 275px;
-  height: 100px;
-  left: 50%;
-  margin-left: -137.5px;
-  top: 100px;
-  background: url("../images/logos_svg/logo_white.svg") no-repeat center;
-  position: fixed;
-  background-size: contain; }
+#bg_header {
+  /*.homeLogo {
+      width: 275px;
+      height: 100px;
+      left: 50%;
+      margin-left: -137.5px;
+      top: 100px;
+      background: url("../images/logos_svg/logo_white.svg") no-repeat center;
+      position: fixed;
+      background-size: contain;
+  }*/ }
+  #bg_header div {
+    background: url("../images/couv3.jpg") center;
+    height: 100%;
+    background-size: cover;
+    position: fixed;
+    width: 100%; }
 
 @media (min-width: 769px) {
   header {
@@ -330,7 +332,17 @@ header {
     float: none;
     height: 100vh; }
     header .item {
-      position: relative; } }
+      position: relative; }
+
+  #bg_header .homeLogo {
+    width: 275px;
+    height: 100px;
+    left: 50%;
+    margin-left: -137.5px;
+    top: 100px;
+    background: url("../images/logos_svg/logo_white.svg") no-repeat center;
+    position: fixed;
+    background-size: contain; } }
 section {
   margin-bottom: 20px;
   clear: both; }

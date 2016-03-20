@@ -15,16 +15,15 @@
 		var desktopLogo = document.getElementById("desktopLogo");
 		var myNavbar = document.getElementById("navbar");
 		var body = document.body;
-		var headerLogo = document.getElementById("headerLogo");
+		var myNavbar = document.getElementById("navbar");
 
 		var myMenu = new Menu(menu, body, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
+		var navbarLogo = new NavbarLogo(desktopLogo);
+		var navbar = new FixedMenu(myNavbar);
 		var menuFixed = new FixedMenu(listMenu);
 		var navbar = new FixedMenu(myNavbar);
-		var navbarLogo = new Logo(desktopLogo);
-		var headerLogo = new Logo(headerLogo);
-		
-		console.log(myNavbar.offsetHeight);
+
 		//ANIMATION BURGER MENU
 
 		burgerMenu.addEventListener("click", function(){
@@ -86,54 +85,29 @@
 
 
 		//FIXED MENU DESKTOP ON LOAD
-		if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
-			menuFixed.fixed();
+		if (typeof isHome !== "undefined") {
+			if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
+				menuFixed.fixed();
+			} else {
+				menuFixed.noFixed();
+			}
 		} else {
-			menuFixed.noFixed();
+			menuFixed.fixed();
 		}
-
 
 		//FIXED NAVBAR MOBILE ON LOAD
-		if (window.pageYOffset > window.innerHeight * 0.6 - myNavbar.offsetHeight) {
-			navbar.fixed();
-		} else {
-			navbar.noFixed();
-		}	
-
-		// REMOVE RESET BODY CLASS ON LOAD
-		if (window.innerWidth > 768) {
-			menuManager.removeBodyClass();
-		}
-
-		//REMOVE LOGO HEADER ON RESIZE
-		if (window.innerWidth < 769) {
-			headerLogo.headerHide();
-		} else {
-			headerLogo.headerShow();
-		}
-
-
-		
-		window.addEventListener('scroll', function(){
-		//FIXED MENU DESKTOP ON SCROLL
-			if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
-				if(menuFixed.isFixed === false){
-					menuFixed.fixed();
-				}
-			}else{
-				if (menuFixed.isFixed === true) {
-					menuFixed.noFixed();
-				}
-			}
-
-		// FIXED MOBILE MENU ON SCROLL
+		if (typeof isHome !== "undefined") {
 			if (window.pageYOffset > window.innerHeight * 0.6 - myNavbar.offsetHeight) {
 				navbar.fixed();
 			} else {
 				navbar.noFixed();
 			}	
+		} else {
+			navbar.fixed();
+		}
 
-		//LOGO ON DESKTOP MENU ON SCROLL	
+		//LOGO ON DESKTOP MENU ON LOAD
+		if (typeof isHome !== "undefined") {
 			if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
 				if (navbarLogo.isShow === false) {
 					navbarLogo.navbarShow();
@@ -147,35 +121,104 @@
 					navbarLogo.navbarHide();
 				}
 			}
+		} else {
+			if (window.innerWidth > 1100) {
+				if (navbarLogo.isShow === false) {
+					navbarLogo.navbarShow();
+					console.log('test');
+				}
+			}
+		}	
+			
+
+		// REMOVE RESET BODY CLASS ON LOAD
+		if (window.innerWidth > 768) {
+			menuManager.removeBodyClass();
+		}
+
+			
+		
+		window.addEventListener('scroll', function(){
+		//FIXED MENU DESKTOP ON SCROLL
+		if (typeof isHome !== "undefined") {
+			if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
+				if(menuFixed.isFixed === false){
+					menuFixed.fixed();
+				}
+			}else{
+				if (menuFixed.isFixed === true) {
+					menuFixed.noFixed();
+				}
+			}
+		} else {
+			menuFixed.fixed();
+		}
+
+		//LOGO ON DESKTOP MENU ON SCROLL
+		if (typeof isHome !== "undefined") {
+			if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
+				if (navbarLogo.isShow === false) {
+					navbarLogo.navbarShow();
+					navbarLogo.isShow = true;
+					console.log('show');
+				}
+			} else {
+				if (navbarLogo.isShow === true) {
+					navbarLogo.isShow = false;
+					console.log('hide');
+					navbarLogo.navbarHide();
+				}
+			}
+		} 
+			
+
+		// FIXED MOBILE MENU ON SCROLL
+			if (window.pageYOffset > window.innerHeight * 0.6 - myNavbar.offsetHeight) {
+				navbar.fixed();
+			} else {
+				navbar.noFixed();
+			}	
+
+		//FIXED NAVBAR MOBILE ON SCROLL	
+		if (typeof isHome !== "undefined") {
+			if (window.pageYOffset > window.innerHeight * 0.6 - myNavbar.offsetHeight) {
+				navbar.fixed();
+				} else {
+					navbar.noFixed();
+				}	
+			} else {
+				navbar.fixed();
+			}
 		}, false);
 
 
 
 		window.addEventListener('resize', function(){
-		//LOGO ON DESKTOP MENU ON RESIZE
-			if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
-				if (navbarLogo.isShow === false) {
-					navbarLogo.navbarShow();
-				}
-			}else {
-				if (navbarLogo.isShow === true) {
-					navbarLogo.navbarHide();
-				}	
-			}
-
 		// REMOVE RESET BODY CLASS ON RESIZE
 			if (window.innerWidth > 768) {
 				menuManager.removeBodyClass();
-			} else {
-				menuManager.pullMenu();
-			}
+			} //else {
+			// 	menuManager.pullMenu();
+			// }
 
-		//REMOVE LOGO HEADER ON RESIZE
-			if (window.innerWidth < 769) {
-				headerLogo.headerHide();
+		//LOGO ON DESKTOP MENU ON RESIZE
+			if (typeof isHome !== "undefined") {
+				if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
+					if (navbarLogo.isShow === false) {
+						navbarLogo.navbarShow();
+					}
+				}else {
+					if (navbarLogo.isShow === true) {
+						navbarLogo.navbarHide();
+					}	
+				}
 			} else {
-				headerLogo.headerShow();
-			}
+				if (window.innerWidth > 1100) {
+					navbarLogo.navbarShow();
+				} else {
+					navbarLogo.navbarHide();
+				}
+			}	
 		}, false);
 
 		slickFotos();

@@ -15,3 +15,5 @@ FixedMenu.prototype.noFixed = function(){
 	this.listMenu.classList.add('noFixed');
 }
 
+	
+
