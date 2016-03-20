@@ -78,9 +78,13 @@
     width: 50%;
     position: fixed;
     top: 0;
+    display: table;
         ul {
+            display: table-cell;
+            position: static;
+            vertical-align: middle;
             margin: 0;
-            position: absolute; 
+            /*position: absolute; */
             background-color: white;
             z-index: 2;
             left: 0;
@@ -88,11 +92,12 @@
             list-style: none;
             height: 100%;  
             margin-top: 50px;
+            z-index: 10;
             li {
                 height: 40px;
-                /*&:first-child {
+                &:first-child {
                     display: none;
-                }*/
+                }
                 a {
                     padding-left: 20px;
                     height: 40px;
@@ -240,6 +245,9 @@
             li {
                 height: 50px;
                 display: inline-block;
+                &:first-child {
+                    display: block;
+                }
                 a {
                     position: relative;
                     /*color: $text-light;*/

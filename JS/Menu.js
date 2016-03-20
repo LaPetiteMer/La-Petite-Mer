@@ -7,6 +7,7 @@ var Menu = function(myMenu, myBody, myBurger, barTop, barMiddle, barBottom){
 	this.barBottom = barBottom;
 	this.myBody = myBody;
 	this.isOpen = false;
+	this.isRemove = false;
 }
 
 var NavbarLogo = function(newLogo) {
@@ -54,11 +55,17 @@ MenuManager.prototype.pushMenu = function() {
 MenuManager.prototype.pullMenu = function() {
 	this.menu.myMenu.className = "closeMenu";
 	this.menu.myBody.className = "resetBody";
-	console.log('test');
 }
 
 MenuManager.prototype.removeBodyClass = function() {
+	this.menu.isRemove = true;
 	this.menu.myBody.classList.remove("resetBody");
+	this.menu.myBody.classList.remove("pushBody");
+}
+
+MenuManager.prototype.addBodyClass = function() {
+	this.menu.isRemove = false;
+	this.menu.myBody.classList.add("resetBody");
 }
 
 

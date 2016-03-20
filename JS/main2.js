@@ -38,16 +38,7 @@
 			}
 		}, false);
 
-		//CLOSE MENU ON CLICK LINKS
-
-		if (window.innerWidth < 769) {
-			for (var i = 0; i < linksMenu.length; i++){
-				linksMenu[i].addEventListener("click", function(){
-					menuManager.close();
-					menuManager.pullMenu();
-				});
-			}
-		}
+		
 
 		//CLOSE MENU WITH ESCAPE
 
@@ -192,14 +183,31 @@
 		}, false);
 
 
+		var isMobile = function() {
+			if (window.innerWidth < 769) {
+				return true;
+			} else {
+				return false;
+			}
+		};
 
-		window.addEventListener('resize', function(){
+		var isDesktop = !isMobile();
+
+		window.addEventListener('resize', function(){	
+			
 		// REMOVE RESET BODY CLASS ON RESIZE
 			if (window.innerWidth > 768) {
-				menuManager.removeBodyClass();
-			} //else {
-			// 	menuManager.pullMenu();
-			// }
+				//NEED BOOLEEN
+					menuManager.removeBodyClass();
+				if (menuManager.menu.isRemove === true) {
+					menuManager.close();
+				}				
+			} else {
+				//NEED BOOLEEN
+				if (menuManager.menu.isRemove === true) {
+					menuManager.addBodyClass();
+				}	
+			}
 
 		//LOGO ON DESKTOP MENU ON RESIZE
 			if (typeof isHome !== "undefined") {
@@ -219,6 +227,65 @@
 					navbarLogo.navbarHide();
 				}
 			}	
+
+			if (window.innerWidth > 768) {
+				if (menu.classList.contains('pushMenu')) {
+					menuManager.pullMenu();
+				}
+			}	
+
+			if (typeof isHome !== "undefined") {
+				if(window.pageYOffset > window.innerHeight - menu.offsetHeight){
+					if(menuFixed.isFixed === false){
+						menuFixed.fixed();
+					}
+				}else{
+					if (menuFixed.isFixed === true) {
+						menuFixed.noFixed();
+					}
+				}
+			} else {
+				menuFixed.fixed();
+			}
+
+			//CLOSE MENU ON CLICK LINKS
+			(function() {
+				 var handler = function() {
+					menuManager.close();
+					menuManager.pullMenu();
+					console.log('OK');
+				};
+
+				if ((isDesktop === true && isMobile() === true) || (isDesktop === false && isMobile() === true)) {
+					isDesktop = false;
+					for (var i = 0; i < linksMenu.length; i++){
+						linksMenu[i].addEventListener("click", handler, false);
+					}
+				} else if (isDesktop === false && isMobile () === false) {
+					isDesktop = true;
+					for (var i = 0; i < linksMenu.length; i++){
+						linksMenu[i].removeEventListener("click", handler, false);
+					}
+				}
+				
+
+			})();
+
+			
+
+
+			// for (var i = 0; i < linksMenu.length; i++){
+			// 	var handler = function() {
+			// 		menuManager.close();
+			// 		menuManager.pullMenu();
+			// 	};
+			// 	if (window.innerWidth < 769 ) {
+			// 		linksMenu[i].addEventListener("click", handler, false);
+			// 	} else {
+			// 		linksMenu[i].removeEventListener("click", handler, false);
+			// 		console.log('BIATCH TAVU!')
+			// 	}
+			// }
 		}, false);
 
 		slickFotos();
