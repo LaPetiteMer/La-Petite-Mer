@@ -1,4 +1,8 @@
 (function(){
+	
+	var isMobile = function() {
+		return (window.innerWidth < 769) ? true : false;
+	};
 
 	window.addEventListener("load", function(){
 
@@ -16,6 +20,7 @@
 		var myNavbar = document.getElementById("navbar");
 		var body = document.body;
 		var myNavbar = document.getElementById("navbar");
+		var isDesktop = !isMobile();
 
 		var myMenu = new Menu(menu, body, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
@@ -23,6 +28,22 @@
 		var navbar = new FixedMenu(myNavbar);
 		var menuFixed = new FixedMenu(listMenu);
 		var navbar = new FixedMenu(myNavbar);
+		
+		// MENU
+		var menuListenerHandler = function() {
+			menuManager.close();
+			menuManager.pullMenu();
+			console.log('OK');
+		};
+		var attachMenuListenersIfNeeded = function() {
+			if (isMobile() === true) {
+				console.log("Mobile wesh");
+				for (var i = 0; i < linksMenu.length; i++) {
+					linksMenu[i].addEventListener("click", menuListenerHandler, false);
+				}
+			}
+		};
+		attachMenuListenersIfNeeded();
 
 		//ANIMATION BURGER MENU
 
@@ -182,20 +203,9 @@
 			}
 		}, false);
 
-
-		var isMobile = function() {
-			if (window.innerWidth < 769) {
-				return true;
-			} else {
-				return false;
-			}
-		};
-
-		var isDesktop = !isMobile();
-
 		window.addEventListener('resize', function(){	
 			
-		// REMOVE RESET BODY CLASS ON RESIZE
+			// REMOVE RESET BODY CLASS ON RESIZE
 			if (window.innerWidth > 768) {
 				//NEED BOOLEEN
 					menuManager.removeBodyClass();
@@ -209,7 +219,7 @@
 				}	
 			}
 
-		//LOGO ON DESKTOP MENU ON RESIZE
+			//LOGO ON DESKTOP MENU ON RESIZE
 			if (typeof isHome !== "undefined") {
 				if (window.innerWidth > 1100 && window.pageYOffset > window.innerHeight - menu.offsetHeight) {
 					if (navbarLogo.isShow === false) {
@@ -248,31 +258,19 @@
 				menuFixed.fixed();
 			}
 
-			//CLOSE MENU ON CLICK LINKS
-			(function() {
-				 var handler = function() {
-					menuManager.close();
-					menuManager.pullMenu();
-					console.log('OK');
-				};
+			// CLOSE MENU ON CLICK LINKS
 
-				if ((isDesktop === true && isMobile() === true) || (isDesktop === false && isMobile() === true)) {
-					isDesktop = false;
-					for (var i = 0; i < linksMenu.length; i++){
-						linksMenu[i].addEventListener("click", handler, false);
-					}
-				} else if (isDesktop === false && isMobile () === false) {
-					isDesktop = true;
-					for (var i = 0; i < linksMenu.length; i++){
-						linksMenu[i].removeEventListener("click", handler, false);
-					}
+			if ((isDesktop === true && isMobile() === true) || (isDesktop === false && isMobile() === true)) {
+				isDesktop = false;
+				for (var i = 0; i < linksMenu.length; i++){
+					linksMenu[i].addEventListener("click", menuListenerHandler, false);
 				}
-				
-
-			})();
-
-			
-
+			} else if (isDesktop === false && isMobile () === false) {
+				isDesktop = true;
+				for (var i = 0; i < linksMenu.length; i++){
+					linksMenu[i].removeEventListener("click", menuListenerHandler, false);
+				}
+			}
 
 			// for (var i = 0; i < linksMenu.length; i++){
 			// 	var handler = function() {
@@ -289,10 +287,7 @@
 		}, false);
 
 		slickFotos();
-
-		
 	
 	}, false);
-	
 
 })();
