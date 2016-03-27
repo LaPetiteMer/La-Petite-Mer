@@ -1,10 +1,10 @@
 
-var Menu = function(myMenu, myBody, myBurger, barTop, barMiddle, barBottom){
+var Menu = function(myMenu, myBody, myBurger){
 	this.myMenu = myMenu;
 	this.myBurger = myBurger;
-	this.barTop = barTop;
-	this.barMiddle = barMiddle;
-	this.barBottom = barBottom;
+	// this.barTop = barTop;
+	// this.barMiddle = barMiddle;
+	// this.barBottom = barBottom;
 	this.myBody = myBody;
 	this.isOpen = false;
 	this.isRemove = false;
@@ -21,30 +21,39 @@ var MenuManager = function(menu){
 
 MenuManager.prototype.open = function(){
 		this.menu.isOpen = true;
-		this.menu.barTop.style.animationName = "slideDown, rotateRight";
-		this.menu.barTop.style.animationDelay = "0s, 0.1s";
-		this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
-		this.menu.barTop.style.animationFillMode = "forwards, forwards";
-		this.menu.barMiddle.classList.add("displayMiddle");
-		this.menu.barMiddle.classList.remove("blockMiddle");
-		this.menu.barBottom.style.animationName = "slideUp, rotateLeft";
-		this.menu.barBottom.style.animationDelay = "0s, 0.1s";
-		this.menu.barBottom.style.animationDuration = "0.1s, 0.1s";
-		this.menu.barBottom.style.animationFillMode = "forwards, forwards";
+		this.menu.myBurger.style.animationName = "rotateLeft";
+		this.menu.myBurger.style.animationDelay = "0s";
+		this.menu.myBurger.style.animationDuration = "0.1s";
+		this.menu.myBurger.style.animationFillMode = "forwards";
+		// this.menu.barTop.style.animationFillMode = "forwards, forwards";
+		// this.menu.barTop.style.animationName = "slideDown, rotateRight";
+		// this.menu.barTop.style.animationDelay = "0s, 0.1s";
+		// this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
+		// this.menu.barTop.style.animationFillMode = "forwards, forwards";
+		// this.menu.barMiddle.classList.add("displayMiddle");
+		// this.menu.barMiddle.classList.remove("blockMiddle");
+		// this.menu.barBottom.style.animationName = "slideUp, rotateLeft";
+		// this.menu.barBottom.style.animationDelay = "0s, 0.1s";
+		// this.menu.barBottom.style.animationDuration = "0.1s, 0.1s";
+		// this.menu.barBottom.style.animationFillMode = "forwards, forwards";
 }
 
 MenuManager.prototype.close = function(){
 		this.menu.isOpen = false;
-		this.menu.barTop.style.animationName = "slideDownInverse, rotateRightInverse";	
-		this.menu.barTop.style.animationDelay = "0.1s, 0s";	
-		this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
-		this.menu.barTop.style.animationFillMode = "backwards, backwards";
-		this.menu.barMiddle.classList.add("blockMiddle");
-		this.menu.barMiddle.classList.remove("displayMiddle");
-		this.menu.barBottom.style.animationName = "slideUpInverse, rotateLeftInverse";
-		this.menu.barBottom.style.animationDelay = "0.1s, 0s";	
-		this.menu.barBottom.style.animationDuration = "0.1s, 0.1s";
-		this.menu.barBottom.style.animationFillMode = "backwards, backwards";
+		this.menu.myBurger.style.animationName = "rotateLeftInverse";
+		this.menu.myBurger.style.animationDelay = "0s";
+		this.menu.myBurger.style.animationDuration = "0.1s";
+		this.menu.myBurger.style.animationFillMode = "forwards";
+		// this.menu.barTop.style.animationName = "slideDownInverse, rotateRightInverse";	
+		// this.menu.barTop.style.animationDelay = "0.1s, 0s";	
+		// this.menu.barTop.style.animationDuration = "0.1s, 0.1s";
+		// this.menu.barTop.style.animationFillMode = "backwards, backwards";
+		// this.menu.barMiddle.classList.add("blockMiddle");
+		// this.menu.barMiddle.classList.remove("displayMiddle");
+		// this.menu.barBottom.style.animationName = "slideUpInverse, rotateLeftInverse";
+		// this.menu.barBottom.style.animationDelay = "0.1s, 0s";	
+		// this.menu.barBottom.style.animationDuration = "0.1s, 0.1s";
+		// this.menu.barBottom.style.animationFillMode = "backwards, backwards";
 }
 
 MenuManager.prototype.pushMenu = function() {
