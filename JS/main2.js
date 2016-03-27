@@ -34,11 +34,9 @@
 		var menuListenerHandler = function() {
 			menuManager.close();
 			menuManager.pullMenu();
-			console.log('OK');
 		};
 		var attachMenuListenersIfNeeded = function() {
 			if (isMobile() === true) {
-				console.log("Mobile wesh");
 				for (var i = 0; i < linksMenu.length; i++) {
 					linksMenu[i].addEventListener("click", menuListenerHandler, false);
 				}
