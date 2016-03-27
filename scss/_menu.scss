@@ -211,31 +211,6 @@
                 top: 7px;
                 border-radius: 2px;
             }
-               /* #top, #middle, #bottom {
-                    position: absolute;
-                    height: 2px;
-                    background-color: black;
-                    margin: auto;
-                    width: 100%;
-                    border-radius: 3px;
-                }
-                
-                #top {
-                    top: 6px;
-                }
-
-                #middle {
-                    top: 13px;
-                }
-
-                .blockMiddle {
-                    opacity: 1;
-                    transition: opacity 0.1 ease;
-                }
-
-                #bottom {
-                    bottom: 6px;
-                }*/
         }             
 }
 
@@ -283,11 +258,12 @@
                     padding: 0 10px;
                     line-height: 50px;
                     border-top: solid 1px transparent;
+                    transition: color 0.4s ease-in-out;
                     &:hover {
-                        color: $text-color;
+                        color: $dark-color;
                         background-color: transparent;
                     }
-                    &:before {
+                   /* &:before {
                         content: "";
                         position: absolute;
                         right: 0;
@@ -299,7 +275,7 @@
                     }
                      &:hover:before {
                             width: 100%;
-                        }
+                        }*/
                 }
                 .reveal {
                         -webkit-animation-name: reveal;

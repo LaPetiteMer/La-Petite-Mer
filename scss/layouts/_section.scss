@@ -191,47 +191,7 @@ section {
 			padding: 20px;
 			background-color: white;
 		}
-		/*.content_descent {
-			position: relative;
-			background-color: rgba(0, 0, 0, .08);
-			border: 5px solid white;
-			padding: 10px;
-		}*/
-		/*.circle {
-			&:before {
-				content: "";
-				position: absolute;
-				width: 50px;
-				height: 50px;
-				background-color: $flashColor;
-				bottom: -30px;
-				right: -30px;
-				width: 50px;
-				height: 50px;
-				border: 11px solid white;
-				border-radius: 100%;
-				z-index: 1;
-			}
-		}*/
 	}
-
-	/*.advices {
-		position: relative;
-		top: -45px;
-		p {
-			text-align: center;
-		}
-		&:after {
-			content: "";
-			background: url('../images/advices_after.svg') no-repeat center;
-			height: 21px;
-			width: 100%;
-			position: absolute;
-			bottom: -20px;
-			right: 0;
-			left: 0;
-		}
-	}*/
 
 	#section2 {
 		position: relative;
@@ -281,44 +241,5 @@ section {
 	#howToPay {
 		background-color: inherit;
 	}
-
-	/*#howToPay {
-		position: relative;
-		top: -5px;
-	}*/
-
-	/*#section4 {
-		position: relative;
-		top: -5px;
-		width: 700px;
-		margin: auto;
-		.container {
-			width: inherit;
-		}
-		.services {
-			div {
-				margin-bottom: 20px;
-				div {
-					margin-top: 0;
-				}
-			}
-		}
-	}*/
 }
 
-/*@media (min-width: 1200px) {
-	#section4 {
-		&:before {
-			content: "";
-			position: absolute;
-			width: 350px;
-			height: 350px;
-			background: url("../images/couv1.jpg") no-repeat center;
-			background-size: cover;
-			border: 25px solid white;
-			border-radius: 100%;
-			left: -290px;
-			top: 190px;
-		}
-	}
-}*/

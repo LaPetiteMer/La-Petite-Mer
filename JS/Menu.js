@@ -2,9 +2,6 @@
 var Menu = function(myMenu, myBody, myBurger){
 	this.myMenu = myMenu;
 	this.myBurger = myBurger;
-	// this.barTop = barTop;
-	// this.barMiddle = barMiddle;
-	// this.barBottom = barBottom;
 	this.myBody = myBody;
 	this.isOpen = false;
 	this.isRemove = false;
@@ -54,6 +51,22 @@ MenuManager.prototype.removeBodyClass = function() {
 MenuManager.prototype.addBodyClass = function() {
 	this.menu.isRemove = false;
 	this.menu.myBody.classList.add("resetBody");
+}
+
+//CLOSE MENU WITH CLICK OUTSIDE
+
+var Coordinate = function(x, y) {
+	this.x = x;
+	this.y = y;
+}
+
+Coordinate.prototype.isInElement = function(element) {
+	var elementRect = element.getBoundingClientRect();
+	if (this.x >= elementRect.left && this.x <= elementRect.right && this.y >= elementRect.top && this.y <= elementRect.bottom) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 

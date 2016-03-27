@@ -72,6 +72,15 @@
 			}
 		})
 
+
+		window.addEventListener('click', function(e){
+			var cursor = new Coordinate(e.clientX, e.clientY);
+			if (!cursor.isInElement(menu) && !cursor.isInElement(burgerMenu) && menuManager.menu.isOpen === true) {
+					menuManager.close();
+					menuManager.pullMenu();
+			}
+		}, false);
+
 		//SLICK SLIDER
 
 		initSlick();
@@ -88,7 +97,7 @@
 		    var href = $.attr(this, 'href');
 		    $root.animate({
 		        scrollTop: $(href).offset().top - 50
-		    }, 500, function () {
+		    }, 1000, function () {
 		        window.location.hash = href;
 		    });
 		    return false;
