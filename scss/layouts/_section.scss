@@ -10,6 +10,16 @@ section {
 	}	
 }
 
+#menu {
+		ul {
+			li {
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+	}
+
 #section1 {
 	.row {
 		margin: 0;

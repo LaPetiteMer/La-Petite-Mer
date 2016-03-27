@@ -8,9 +8,8 @@ header {
 
  #bg_header {
         div {
-            background: url("../images/couv3.jpg") center;
+            background: url("../images/couv3.jpg") top center no-repeat;
             height: 100%;
-            background-size: cover;
             position: fixed;
             width: 100%;
         }

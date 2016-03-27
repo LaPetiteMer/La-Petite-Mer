@@ -326,9 +326,8 @@ header {
       background-size: contain;
   }*/ }
   #bg_header div {
-    background: url("../images/couv3.jpg") center;
+    background: url("../images/couv3.jpg") top center no-repeat;
     height: 100%;
-    background-size: cover;
     position: fixed;
     width: 100%; }
 
@@ -354,6 +353,9 @@ section {
   clear: both; }
   section aside p:first-of-type {
     color: #134C9A; }
+
+#menu ul li:first-child {
+  display: none; }
 
 #section1 .row {
   margin: 0; }

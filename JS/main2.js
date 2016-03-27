@@ -18,11 +18,12 @@
 		var listMenu = document.getElementById("listMenu");
 		var desktopLogo = document.getElementById("desktopLogo");
 		var myNavbar = document.getElementById("navbar");
-		var body = document.body;
+		// var body = document.body;
+		var content = document.getElementById('content');
 		var myNavbar = document.getElementById("navbar");
 		var isDesktop = !isMobile();
 
-		var myMenu = new Menu(menu, body, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
+		var myMenu = new Menu(menu, content, burgerMenu, burgerTop, burgerMiddle, burgerBottom);
 		var menuManager = new MenuManager(myMenu);
 		var navbarLogo = new NavbarLogo(desktopLogo);
 		var navbar = new FixedMenu(myNavbar);
