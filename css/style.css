@@ -91,6 +91,11 @@ li {
     -webkit-transform: translateY(65px); }
   to {
     -webkit-transform: translateY(0px); } }
+@-webkit-keyframes reveal {
+  from {
+    -webkit-transform: translateX(-50px); }
+  to {
+    -webkit-transform: translateX(0px); } }
 #navbar {
   z-index: 10;
   width: 100%;
@@ -148,6 +153,11 @@ li {
         #menu ul li a:hover {
           background-color: #134C9A;
           color: white; }
+      #menu ul li .reveal {
+        -webkit-animation-name: reveal;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-fill-mode: forwards; }
     #menu ul .hideLogo {
       position: absolute;
       background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
@@ -338,6 +348,16 @@ li {
     /*&:first-child {
         display: initial;
     }*/ } }
+@-webkit-keyframes revealLogo {
+  from {
+    -webkit-transform: translateY(50px); }
+  to {
+    -webkit-transform: translateY(0px); } }
+@-webkit-keyframes revealHeader {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 header {
   /*	float: left;
   */
@@ -360,7 +380,16 @@ header {
     background: url("../images/couv3.jpg") top center no-repeat;
     height: 100%;
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    -webkit-animation-name: revealHeader;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards; }
+  #bg_header .homeLogo {
+    -webkit-animation-name: revealLogo;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards; }
 
 @media (min-width: 769px) {
   header {

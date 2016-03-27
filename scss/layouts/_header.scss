@@ -1,3 +1,13 @@
+@-webkit-keyframes revealLogo{
+  from {-webkit-transform: translateY(50px);}
+  to{-webkit-transform: translateY(0px);}
+}
+
+@-webkit-keyframes revealHeader{
+  from {opacity: 0;}
+  to{opacity: 1;}
+}
+
 header {
 /*	float: left;
 */    height: 60vh;
@@ -12,6 +22,16 @@ header {
             height: 100%;
             position: fixed;
             width: 100%;
+            -webkit-animation-name: revealHeader;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+        .homeLogo {
+            -webkit-animation-name: revealLogo;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards;
         }
         /*.homeLogo {
             width: 275px;

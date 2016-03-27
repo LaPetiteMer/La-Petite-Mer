@@ -43,6 +43,11 @@
   to{-webkit-transform: translateY(0px);}
 }
 
+@-webkit-keyframes reveal{
+  from {-webkit-transform: translateX(-50px);}
+  to{-webkit-transform: translateX(0px);}
+}
+
 
 #navbar {
     z-index: 10;
@@ -110,6 +115,12 @@
                         color: white;
                     }
                 }
+                 .reveal {
+                        -webkit-animation-name: reveal;
+                        -webkit-animation-delay: 0s;
+                        -webkit-animation-duration: 2s;
+                        -webkit-animation-fill-mode: forwards;
+                    }
             }
             .hideLogo {
                 position: absolute;

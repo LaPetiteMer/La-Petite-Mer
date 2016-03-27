@@ -123,12 +123,10 @@
 				if (navbarLogo.isShow === false) {
 					navbarLogo.navbarShow();
 					navbarLogo.isShow = true;
-					console.log('show');
 				}
 			} else {
 				if (navbarLogo.isShow === true) {
 					navbarLogo.isShow = false;
-					console.log('hide');
 					navbarLogo.navbarHide();
 				}
 			}
@@ -136,7 +134,6 @@
 			if (window.innerWidth > 1100) {
 				if (navbarLogo.isShow === false) {
 					navbarLogo.navbarShow();
-					console.log('test');
 				}
 			}
 		}	
@@ -171,12 +168,10 @@
 				if (navbarLogo.isShow === false) {
 					navbarLogo.navbarShow();
 					navbarLogo.isShow = true;
-					console.log('show');
 				}
 			} else {
 				if (navbarLogo.isShow === true) {
 					navbarLogo.isShow = false;
-					console.log('hide');
 					navbarLogo.navbarHide();
 				}
 			}
@@ -286,7 +281,7 @@
 		}, false);
 
 		slickFotos();
-	
+
 	}, false);
 
 })();
