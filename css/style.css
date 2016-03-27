@@ -153,11 +153,6 @@ li {
         #menu ul li a:hover {
           background-color: #134C9A;
           color: white; }
-      #menu ul li .reveal {
-        -webkit-animation-name: reveal;
-        -webkit-animation-delay: 0s;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-fill-mode: forwards; }
     #menu ul .hideLogo {
       position: absolute;
       background: url("../images/logos_svg/logo_couleur.svg") no-repeat center;
@@ -320,6 +315,11 @@ li {
             transition: width 0.2s ease; }
           #menu ul li a:hover:before {
             width: 100%; }
+        #menu ul li .reveal {
+          -webkit-animation-name: reveal;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-duration: 2s;
+          -webkit-animation-fill-mode: forwards; }
         #menu ul li #desktopLogo {
           position: absolute; }
         #menu ul li .home_picto {
@@ -380,16 +380,7 @@ header {
     background: url("../images/couv3.jpg") top center no-repeat;
     height: 100%;
     position: fixed;
-    width: 100%;
-    -webkit-animation-name: revealHeader;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards; }
-  #bg_header .homeLogo {
-    -webkit-animation-name: revealLogo;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards; }
+    width: 100%; }
 
 @media (min-width: 769px) {
   header {
@@ -399,6 +390,11 @@ header {
     header .item {
       position: relative; }
 
+  #bg_header div {
+    -webkit-animation-name: revealHeader;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards; }
   #bg_header .homeLogo {
     width: 275px;
     height: 100px;
@@ -407,7 +403,11 @@ header {
     top: 100px;
     background: url("../images/logos_svg/logo_white.svg") no-repeat center;
     position: fixed;
-    background-size: contain; } }
+    background-size: contain;
+    -webkit-animation-name: revealLogo;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards; } }
 section {
   margin-bottom: 20px;
   clear: both; }

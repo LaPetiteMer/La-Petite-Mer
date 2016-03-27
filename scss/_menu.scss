@@ -115,12 +115,6 @@
                         color: white;
                     }
                 }
-                 .reveal {
-                        -webkit-animation-name: reveal;
-                        -webkit-animation-delay: 0s;
-                        -webkit-animation-duration: 2s;
-                        -webkit-animation-fill-mode: forwards;
-                    }
             }
             .hideLogo {
                 position: absolute;
@@ -307,6 +301,12 @@
                             width: 100%;
                         }
                 }
+                .reveal {
+                        -webkit-animation-name: reveal;
+                        -webkit-animation-delay: 0s;
+                        -webkit-animation-duration: 2s;
+                        -webkit-animation-fill-mode: forwards;
+                    }
                 #desktopLogo {
                     position: absolute;
                 }
